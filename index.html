@@ -1,13 +1,357 @@
 <!doctype html>
 <html lang="es-MX">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Travel Design</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  </head>
-  <body>
-    <h1>Travel Design</h1>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Travel Design</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+
+
+  <header class="position-relative">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+
+        <div class="d-flex justify-content-between align-items-center w-100 d-lg-none">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <a class="mx-auto" href="/">
+            <img src="assets/img/logo-td-texto.png" alt="Logo" width="150">
+          </a>
+
+          <a href="#" class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </a>
+        </div>
+
+
+
+
+        <!-- <div class="language-switcher-mobile d-lg-none">
+              <span><a href="#">ES</a> / <a href="#">EN</a></span>
+            </div> -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav mx-auto align-items-start align-items-lg-center w-100">
+
+              <li class="nav-item"><a class="nav-link" href="#">Destinos</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Experiencias</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+
+
+              <li class="nav-item d-none d-lg-block">
+                <a href="#">
+                  <img src="assets/img/logo-td-texto.png" alt="Logo Travel Design" class="navbar-logo">
+                </a>
+              </li>
+
+              <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+
+              <li class="nav-item d-flex flex-column align-items-center position-relative d-none d-lg-flex">
+                <span class="language-switcher d-none d-lg-block"><a href="#">ES</a> / <a href="#">EN</a></span>
+                <input class="form-control search-bar mt-4 mt-lg-0" type="search" placeholder="Buscar">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
+
+    <div class="swiper swiper-hero position-relative">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <img src="assets/img/home-banner.webp" alt="Imagen 1">
+          <div class="hero-overlay">
+            <h1 class="display-4 text-uppercase">Experience the luxury</h1>
+            <a href="#" class="btn hero-btn text-uppercase">Reservar un viaje</a>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img/home-banner2.webp" alt="Imagen 2">
+          <div class="hero-overlay">
+            <h1 class="display-4 text-uppercase">Creating memories</h1>
+            <a href="#" class="btn hero-btn text-uppercase">Reservar un viaje</a>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <video autoplay muted loop playsinline>
+            <source src="assets/video/VideoBanner.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+          </video>
+          <div class="hero-overlay">
+            <h1 class="display-4 text-uppercase">Awake your senses</h1>
+            <a href="#" class="btn hero-btn text-uppercase">Reservar un viaje</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-pagination swiper-pagination-hero"></div>
+
+    </div>
+  </header>
+
+  <main></main>
+
+  <section class="info-home py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <img src="assets/img/logo-virtuoso-b.svg" class="img-fluid mb-5" alt="Virtuoso Member">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p class="mb-5 h3 fw-light lh-base">Cada viaje es una obra de arte creada para ti. No solo planeamos
+            itinerarios, diseñamos experiencias que envuelven tus sentidos en un lujo irresistible. Desde destinos
+            exóticos hasta rincones exclusivos, te llevamos más allá de lo convencional, ofreciéndote el privilegio de
+            explorar el mundo con estilo y sofisticación.</p>
+          <p class="mb-5 h3 fw-light lh-base">Descubre el lujo hecho a tu medida. Permítete ser cautivado por la
+            elegancia de cada detalle, y vive la esencia de viajar como nunca antes.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <a href="#" class="btn-td btn-blanco">Comienza a planear tu aventura</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="top-10 pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class="title-section-home">Top 10</h2>
+          <div class="swiper swiper-top-10">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="text-start">
+                  <a href="#">
+                    <img src="assets/img/top10-africa.jpg" class="img-fluid" alt="Imagen 1">
+                  </a>
+                  <a href="#" class="image-title">África</a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="text-start">
+                  <a href="#">
+                    <img src="https://placehold.co/300x400" class="img-fluid" alt="Imagen 4">
+                  </a>
+                  <a href="#" class="image-title">Japón</a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="text-start">
+                  <a href="#">
+                    <img src="https://placehold.co/300x400" class="img-fluid" alt="Imagen 5">
+                  </a>
+                  <a href="#" class="image-title">Italia</a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="text-start">
+                  <a href="#">
+                    <img src="https://placehold.co/300x400" class="img-fluid" alt="Imagen 6">
+                  </a>
+                  <a href="#" class="image-title">Egipto</a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="text-start">
+                  <a href="#">
+                    <img src="https://placehold.co/300x400" class="img-fluid" alt="Imagen 6">
+                  </a>
+                  <a href="#" class="image-title">Turquía</a>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="text-start">
+                  <a href="#">
+                    <img src="https://placehold.co/300x400" class="img-fluid" alt="Imagen 6">
+                  </a>
+                  <a href="#" class="image-title">Ski</a>
+                </div>
+              </div>
+
+
+              <div class="swiper-slide">
+                <div class="text-start">
+                  <a href="#">
+                    <img src="assets/img/top10-cruceros.jpg" class="img-fluid" alt="Imagen 3">
+                  </a>
+                  <a href="#" class="image-title">Cruceros</a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="swiper-pagination swiper-pagination-top-10"></div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="entradas-blog pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class="title-section-home">Experiencias inolvidables</h2>
+          <img src="assets/img/aurora-1190254.jpg" class="img-fluid d-block m-auto" alt="Entrada de blog">
+          <p class="mt-2 text-uppercase fs-2">¿Por qué las Auroras Boreales son tan especiales?</p>
+          <div class="d-flex justify-content-center mt-5">
+            <a href="#" class="btn-td btn-negro">Más entradas</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="pre-footer pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <section class="d-flex flex-wrap justify-content-around justify-content-md-between align-items-center gap-5">
+            <img src="assets/img/logo-four-seasons.svg" class="img-fluid mb-3 mb-md-0"
+              alt="Four Seasons - Hotels and Resorts">
+            <img src="assets/img/logo-virtuoso.svg" class="img-fluid mb-3 mb-md-0" alt="Virtuoso Member">
+            <img src="assets/img/logo-marriot.png" class="img-fluid mb-3 mb-md-0" alt="Marriot international Stars">
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="py-4 mt-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <section
+            class="d-flex flex-wrap flex-column text-center text-md-start flex-md-row justify-content-around align-items-center align-items-md-start gap-5">
+            <section class="logo mb-3 mb-md-0">
+              <img src="assets/img/logo-td-texto.png" class="img-fluid" alt="Marriot international Stars">
+            </section>
+            <section class="mb-3 mb-md-0">
+              <h6>Ubicación</h6>
+              <p>
+                <a href="https://maps.app.goo.gl/bpRoKHiGTVWi51Fg8" target="_blank">Bosque de Radiatas 34,<br>
+                  Piso 1, Oficina 1-D.<br>
+                  Bosque de las Lomas,<br>
+                  C.P 051200</a>
+              </p>
+            </section>
+            <section class="mb-3 mb-md-0">
+              <h6>Contacto</h6>
+              <p><a href="mailto:contacto@td.com.mx">Mail: contacto@td.com.mx</a></p>
+              <p><a href="tel:5585263303">Tel: 55 8526 3303</a></p>
+            </section>
+            <section>
+              <p><a href="#">Preguntas Frecuentes</a></p>
+              <p><a href="#">Aviso de privacidad</a></p>
+              <p><a href="#">Términos y condiciones</a></p>
+            </section>
+            <section class="rrss d-flex gap-3 align-self-center mb-3 mb-md-0">
+              <a href="#" target="_blank"><img src="assets/img/icono-facebook.svg" class="img-fluid" alt="Facebook"></a>
+              <a href="#" target="_blank"><img src="assets/img/icono-instagram.svg" class="img-fluid"
+                  alt="Instagram"></a>
+            </section>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // Slider Hero
+    const swiper = new Swiper('.swiper-hero', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+      pagination: {
+        el: '.swiper-pagination-hero',
+        clickable: true,
+      },
+    });
+    // Slider Top 10
+    var swiperTop10 = new Swiper('.swiper-top-10', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+      },
+      navigation: false,
+      pagination: {
+        el: '.swiper-pagination-top-10',
+        clickable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+        },
+      },
+    });
+
+    // Seleccionamos el enlace <link> de la hoja de estilo
+    const link = document.querySelector('link[rel="stylesheet"][href="assets/css/style.css"]');
+
+    if (link) {
+      // Generamos un timestamp único
+      const version = new Date().getTime();
+
+      // Agregamos el timestamp como un parámetro en la URL del archivo CSS
+      link.href = `${link.href}?v=${version}`;
+    }
+
+
+  </script>
+</body>
+
 </html>
