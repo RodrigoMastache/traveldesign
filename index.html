@@ -15,7 +15,7 @@
 
 
   <header class="position-relative">
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark position-fixed">
       <div class="container-fluid">
 
         <div class="d-flex justify-content-between align-items-center w-100 d-lg-none">
@@ -25,8 +25,8 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <a class="mx-auto" href="/">
-            <img src="assets/img/logo-td-texto.png" alt="Logo" width="150">
+          <a class="logo-mobile" href="/">
+            <img src="assets/img/logo-td-texto.png" alt="Travel Design Logo">
           </a>
 
           <a href="#" class="search-icon">
@@ -40,10 +40,6 @@
 
 
 
-
-        <!-- <div class="language-switcher-mobile d-lg-none">
-              <span><a href="#">ES</a> / <a href="#">EN</a></span>
-            </div> -->
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel">
 
@@ -56,21 +52,27 @@
 
               <li class="nav-item"><a class="nav-link" href="#">Destinos</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Experiencias</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+              <li class="nav-item"><a class="nav-link" href="/nosotros.html">Nosotros</a></li>
 
 
               <li class="nav-item d-none d-lg-block">
-                <a href="#">
+                <a href="/">
                   <img src="assets/img/logo-td-texto.png" alt="Logo Travel Design" class="navbar-logo">
                 </a>
               </li>
 
               <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+              
+              <li class="nav-item">
+                <div class="language-switcher-mobile d-lg-none">
+                  <span><a href="#">ES</a> / <a href="#">EN</a></span>
+                </div>
+              </li>
 
               <li class="nav-item d-flex flex-column align-items-center position-relative d-none d-lg-flex">
                 <span class="language-switcher d-none d-lg-block"><a href="#">ES</a> / <a href="#">EN</a></span>
-                <input class="form-control search-bar mt-4 mt-lg-0" type="search" placeholder="Buscar">
+                <input class="form-control search-bar mt-4 mt-lg-0" type="search" placeholder="">
               </li>
             </ul>
           </div>
@@ -339,16 +341,31 @@
       },
     });
 
+    // Scroll Navbar
+
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+          navbar.classList.add('navbar-scrolled');
+        } else {
+          navbar.classList.remove('navbar-scrolled');
+        }
+      });
+    
+
+
     // Seleccionamos el enlace <link> de la hoja de estilo
     const link = document.querySelector('link[rel="stylesheet"][href="assets/css/style.css"]');
 
     if (link) {
       // Generamos un timestamp único
       const version = new Date().getTime();
-
       // Agregamos el timestamp como un parámetro en la URL del archivo CSS
       link.href = `${link.href}?v=${version}`;
     }
+
+  
 
 
   </script>
