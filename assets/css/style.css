@@ -596,23 +596,40 @@ footer {
 /* SECCIONES INTERNAS */
 
 .hero-section {
-    height: 500px;
+    min-height: 600px;
     position: relative;
     overflow: hidden;
 
     & img{
+        width: 100%;
+        height: 100% !important;
+        position: absolute;
         object-fit: cover;
-    z-index: 1;
+        object-position: center bottom;
+        top: 0;
+        left: 0;
+        z-index: 1;
     }
 
     & .overlay{
-        background-color: rgba(0, 0, 0, 0.5); /* Overlay semi-transparente */
+        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
         z-index: 2;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     & h1{
         z-index: 3;
         letter-spacing: 0.5rem;
+        font-size: 2rem;
+        font-weight: 400;
         text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
         text-align: center;
         text-transform: uppercase;
@@ -620,11 +637,39 @@ footer {
     }
   }
 
-  /* LIFESTYLE */
+  .section-pagination{
 
-  .lifestyle-img{
-    width: 100%;
-    aspect-ratio: 3 / 2;
-    object-fit: cover;
-    object-position: center;
+    & .pagination {
+
+        gap: 0.5rem;
+
+        & .page-link {
+            border: none;
+            color: #000;
+            width: 32px;
+            height: 32px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            
+            &:hover {
+                background-color: transparent;
+                color: #000;
+            }
+            
+            &:focus {
+                box-shadow: none;
+            }
+        }
+    }
+    
+    & .page-item.active .page-link {
+        background-color: #000;
+        color: #fff;
+        
+    }
+    
   }
+
