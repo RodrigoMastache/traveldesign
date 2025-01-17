@@ -33,12 +33,16 @@ var swiperTop10 = new Swiper('.swiper-top-10', {
 // Scroll Navbar
 
   const navbar = document.querySelector(".navbar");
+  const logo_header = document.querySelector('#logo-header');
 
   window.addEventListener('scroll', function () {
     if (window.scrollY > 50) {
       navbar.classList.add('navbar-scrolled');
+      // Mover logo del lugar
+      logo_header.classList.add('order-first');
     } else {
       navbar.classList.remove('navbar-scrolled');
+      logo_header.classList.remove('order-first');
     }
   });
 
@@ -53,3 +57,4 @@ if (link) {
   // Agregamos el timestamp como un parámetro en la URL del archivo CSS
   link.href = `${link.href}?v=${version}`;
 }
+

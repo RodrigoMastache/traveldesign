@@ -16,14 +16,14 @@
 
   <header class="position-relative">
     <nav class="navbar navbar-expand-lg navbar-dark position-fixed">
-      <div class="container-fluid">
+      <div class="container">
         <div class="d-flex justify-content-between align-items-center w-100 d-lg-none">
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <a class="logo-mobile" href="/">
-            <img src="assets/img/logo-td-texto.png" alt="Travel Design Logo">
+            <img src="assets/img/logo-travel-design.svg" alt="Travel Design Logo">
           </a>
           <a href="#" class="search-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -46,20 +46,17 @@
                 <a class="nav-link" href="./lifestyle.html">Destinos</a>
               </li>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Experiencias</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="./experiencias-toscana.html">Toscana</a></li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Experiencias</a>
               </li>
 
               <li class="nav-item">
                 <a class="nav-link" href="./nosotros.html">Nosotros</a>
               </li>
 
-              <li class="nav-item d-none d-lg-block">
+              <li class="nav-item d-none d-lg-block" id="logo-header">
                 <a href="/">
-                  <img src="assets/img/logo-td-texto.png" alt="Logo Travel Design" class="navbar-logo">
+                  <img src="assets/img/logo-travel-design.svg" alt="Logo Travel Design" class="navbar-logo">
                 </a>
               </li>
 
@@ -73,12 +70,12 @@
 
               <li class="nav-item">
                 <div class="language-switcher-mobile d-lg-none">
-                  <span><a href="#">ES</a> / <a href="#">EN</a></span>
+                  <span><a href="#">English</a></span>
                 </div>
               </li>
 
               <li class="nav-item d-flex flex-column align-items-center position-relative d-none d-lg-flex">
-                <span class="language-switcher d-none d-lg-block"><a href="#">ES</a> / <a href="#">EN</a></span>
+                <span class="language-switcher d-none d-lg-block"><a href="#">ENGLISH</a></span>
                 <input class="form-control search-bar mt-4 mt-lg-0" type="search" placeholder="">
               </li>
 
@@ -95,14 +92,14 @@
           <img src="assets/img/home-banner.webp" alt="Imagen 1">
           <div class="hero-overlay">
             <h1 class="display-4 text-uppercase">Experience the luxury</h1>
-            <a href="#" class="btn hero-btn text-uppercase">Reservar un viaje</a>
+            <a href="#" class="btn hero-btn">Planea tu viaje</a>
           </div>
         </div>
         <div class="swiper-slide">
           <img src="assets/img/home-banner2.webp" alt="Imagen 2">
           <div class="hero-overlay">
             <h1 class="display-4 text-uppercase">Creating memories</h1>
-            <a href="#" class="btn hero-btn text-uppercase">Reservar un viaje</a>
+            <a href="#" class="btn hero-btn">Planea tu viaje</a>
           </div>
         </div>
         <div class="swiper-slide">
@@ -112,7 +109,7 @@
           </video>
           <div class="hero-overlay">
             <h1 class="display-4 text-uppercase">Awake your senses</h1>
-            <a href="#" class="btn hero-btn text-uppercase">Reservar un viaje</a>
+            <a href="#" class="btn hero-btn">Planea tu viaje</a>
           </div>
         </div>
       </div>
@@ -121,92 +118,67 @@
   </header>
 
   <main>
-    <section class="info-home py-5">
+    <section class="info-home section-padding">
       <div class="container">
         <div class="row">
-          <div class="col">
-            <img src="assets/img/logo-virtuoso-b.svg" class="img-fluid mb-5" alt="Virtuoso Member">
+          <div class="col-md-3">
+            <img src="assets/img/logo-virtuoso.png" class="img-fluid mb-5 mb-md-0" alt="Virtuoso Member">
           </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <p class="mb-5 h3 fw-light lh-base">Cada viaje es una obra de arte creada para ti. No solo planeamos
+          <div class="col-md-8">
+            <p class="text-justify">Cada viaje es una obra de arte creada para ti. No solo planeamos
               itinerarios, diseñamos experiencias que envuelven tus sentidos en un lujo irresistible. Desde destinos
               exóticos hasta rincones exclusivos, te llevamos más allá de lo convencional, ofreciéndote el privilegio de
               explorar el mundo con estilo y sofisticación.</p>
-            <p class="mb-5 h3 fw-light lh-base">Descubre el lujo hecho a tu medida. Permítete ser cautivado por la
+            <p class="text-justify">Descubre el lujo hecho a tu medida. Permítete ser cautivado por la
               elegancia de cada detalle, y vive la esencia de viajar como nunca antes.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <a href="#" class="btn-td btn-blanco">Comienza a planear tu aventura</a>
-          </div>
+              <a href="#" class="btn-negro">Comienza a planear tu viaje</a>
+          </div>          
         </div>
       </div>
     </section>
-    <section class="top-10 pt-5">
+
+    <section class="top-10 section-padding">
       <div class="container">
         <div class="row">
           <div class="col">
-            <h2 class="title-section-home">Top 10</h2>
+            <h2 class="title-section-home mb-5">Top 10</h2>
             <div class="swiper swiper-top-10">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="text-start">
                     <a href="#">
-                      <img src="assets/img/top10-africa.jpg" class="img-fluid" alt="Imagen 1">
+                      <img src="assets/img/top10-africa.png" class="img-fluid" alt="África">
+                      <span class="image-title">África</span>
                     </a>
-                    <a href="#" class="image-title">África</a>
-                  </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="text-start">
                     <a href="#">
-                      <img src="https://placehold.co/300x400" class="img-fluid" alt="Imagen 4">
+                      <img src="assets/img/top10-islandia.png" class="img-fluid" alt="Islandia">
+                      <span class="image-title">Islandia</span>
                     </a>
-                    <a href="#" class="image-title">Japón</a>
-                  </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="text-start">
                     <a href="#">
-                      <img src="https://placehold.co/300x400" class="img-fluid" alt="Imagen 5">
+                      <img src="assets/img/top10-cruceros.png" class="img-fluid" alt="Cruceros">
+                      <span class="image-title">Cruceros</span>
                     </a>
-                    <a href="#" class="image-title">Italia</a>
-                  </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="text-start">
                     <a href="#">
                       <img src="https://placehold.co/300x400" class="img-fluid" alt="Imagen 6">
+                      <span class="image-title">Egipto</span>
                     </a>
-                    <a href="#" class="image-title">Egipto</a>
-                  </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="text-start">
                     <a href="#">
                       <img src="https://placehold.co/300x400" class="img-fluid" alt="Imagen 6">
+                      <span class="image-title">Turquía</span>
                     </a>
-                    <a href="#" class="image-title">Turquía</a>
-                  </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="text-start">
                     <a href="#">
                       <img src="https://placehold.co/300x400" class="img-fluid" alt="Imagen 6">
+                      <span class="image-title">Ski</span>
                     </a>
-                    <a href="#" class="image-title">Ski</a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="text-start">
-                    <a href="#">
-                      <img src="assets/img/top10-cruceros.jpg" class="img-fluid" alt="Imagen 3">
-                    </a>
-                    <a href="#" class="image-title">Cruceros</a>
-                  </div>
                 </div>
               </div>
               <div class="swiper-pagination swiper-pagination-top-10"></div>
@@ -215,16 +187,12 @@
         </div>
       </div>
     </section>
-    <section class="entradas-blog pt-5">
+    <section class="entradas-blog section-padding">
       <div class="container">
         <div class="row">
           <div class="col">
-            <h2 class="title-section-home">Experiencias inolvidables</h2>
-            <img src="assets/img/aurora-1190254.jpg" class="img-fluid d-block m-auto" alt="Entrada de blog">
-            <p class="mt-2 text-uppercase fs-2">¿Por qué las Auroras Boreales son tan especiales?</p>
-            <div class="d-flex justify-content-center mt-5">
-              <a href="#" class="btn-td btn-negro">Más entradas</a>
-            </div>
+            <h2 class="title-section-home mb-5">Experiencias inolvidables</h2>
+            
           </div>
         </div>
       </div>
@@ -233,11 +201,12 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <section
-              class="d-flex flex-wrap justify-content-around justify-content-md-between align-items-center gap-5">
-              <img src="assets/img/logo-four-seasons.svg" class="img-fluid mb-3 mb-md-0"
-                alt="Four Seasons - Hotels and Resorts">
-              <img src="assets/img/logo-virtuoso.svg" class="img-fluid mb-3 mb-md-0" alt="Virtuoso Member">
+            <section class="d-flex flex-wrap justify-content-around justify-content-md-between align-items-center gap-4">
+              <img src="assets/img/logo-four-seasons.png" class="img-fluid mb-3 mb-md-0"
+              alt="Four Seasons - Hotels and Resorts">
+              <div class="vr my-0 d-none d-md-block"></div>
+              <img src="assets/img/logo-virtuoso-b.png" class="img-fluid mb-3 mb-md-0" alt="Virtuoso Member">
+              <div class="vr my-0 d-none d-md-block"></div>
               <img src="assets/img/logo-marriot.png" class="img-fluid mb-3 mb-md-0" alt="Marriot international Stars">
             </section>
           </div>
@@ -247,16 +216,16 @@
   </main>
 
   <footer class="py-4 mt-5">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col">
           <section
             class="d-flex flex-wrap flex-column text-center text-md-start flex-md-row justify-content-around align-items-center align-items-md-start gap-5">
-            <section class="logo mb-3 mb-md-0">
-              <img src="assets/img/logo-td-texto.png" class="img-fluid" alt="Marriot international Stars">
+            <section class="logo mb-3 mb-md-0 col-lg-4">
+              <img src="assets/img/logo-travel-design.svg" class="img-fluid" alt="Logo Travel Design">
             </section>
             <section class="mb-3 mb-md-0">
-              <h6>Ubicación</h6>
+              <h3>Ubicación</h3>
               <p>
                 <a href="https://maps.app.goo.gl/bpRoKHiGTVWi51Fg8" target="_blank">Bosque de Radiatas 34,<br>
                   Piso 1, Oficina 1-D.<br>
@@ -265,20 +234,21 @@
               </p>
             </section>
             <section class="mb-3 mb-md-0">
-              <h6>Contacto</h6>
-              <p><a href="mailto:contacto@td.com.mx">Mail: contacto@td.com.mx</a></p>
-              <p><a href="tel:5585263303">Tel: 55 8526 3303</a></p>
+              <h3>Contacto</h3>
+              <p><a href="mailto:contacto@td.com.mx">contacto@td.com.mx</a></p>
+              <p><a href="tel:+525585263303">+52 55 8526 3303</a></p>
             </section>
             <section>
-              <p><a href="#">Preguntas Frecuentes</a></p>
-              <p><a href="#">Aviso de privacidad</a></p>
-              <p><a href="#">Términos y condiciones</a></p>
+              <p><a class="underline" href="#">Preguntas Frecuentes</a></p>
+              <p><a class="underline" href="#">Aviso de privacidad</a></p>
+              <p><a class="underline" href="#">Términos y condiciones</a></p>
+              <section class="rrss d-flex gap-3 mt-4 justify-content-center justify-content-md-start">
+                <a href="#" target="_blank"><img src="assets/img/icono-facebook.svg" class="img-fluid" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="assets/img/icono-instagram.svg" class="img-fluid"
+                    alt="Instagram"></a>
+              </section>
             </section>
-            <section class="rrss d-flex gap-3 align-self-center mb-3 mb-md-0">
-              <a href="#" target="_blank"><img src="assets/img/icono-facebook.svg" class="img-fluid" alt="Facebook"></a>
-              <a href="#" target="_blank"><img src="assets/img/icono-instagram.svg" class="img-fluid"
-                  alt="Instagram"></a>
-            </section>
+
           </section>
         </div>
       </div>
