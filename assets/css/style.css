@@ -389,6 +389,23 @@ img {
 
 }
 
+@media screen and (width <= 475px){
+
+    .experiencias {
+        .slide-card h2 {
+            font-size: 4vw!important;
+        }
+        .slide-card p{
+            font-size: 3vw!important;
+        }
+        .slide-card a {
+   font-size: 0.7rem!important;
+        }
+    }
+}
+
+/* END Media Queries */
+
 
 
 header {
