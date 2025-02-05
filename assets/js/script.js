@@ -30,21 +30,89 @@ var swiperTop10 = new Swiper('.swiper-top-10', {
   },
 });
 
+// Slider experiencias
+
+const thumbsSwiper = new Swiper('.thumbs-swiper', {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  slidesPerGroup: 3,
+  watchSlidesProgress: true,
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+      el: '.thumbs-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+          return '<span class="' + className + '"></span>';
+      },
+  },
+  breakpoints: {
+      320: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+      },
+      480: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+      }
+  }
+});
+
+const mainSwiper = new Swiper('.main-swiper', {
+  spaceBetween: 10,
+  autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+  },
+  thumbs: {
+      swiper: thumbsSwiper,
+  },
+});
+
+// Cards Slider
+const swiperCards = new Swiper('.swiper-cards-slider', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+  },
+  navigation: false,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+
 // Scroll Navbar
 
   const navbar = document.querySelector(".navbar");
   const logo_header = document.querySelector('#logo-header');
 
-  window.addEventListener('scroll', function () {
+  function handleNavbarScroll(){
     if (window.scrollY > 50) {
       navbar.classList.add('navbar-scrolled');
-      // Mover logo del lugar
       logo_header.classList.add('order-first');
     } else {
       navbar.classList.remove('navbar-scrolled');
       logo_header.classList.remove('order-first');
     }
-  });
+
+  }
+
+// Verificar el estado del scroll cuando la página carga
+document.addEventListener('DOMContentLoaded', handleNavbarScroll);
+
+// Verificar el estado durante el scroll
+window.addEventListener('scroll', handleNavbarScroll);
 
 
 
