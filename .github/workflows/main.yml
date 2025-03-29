@@ -1,0 +1,23 @@
+name: 🚀 Desplegar el sitio
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy_job:
+    name: Desplegar archivos
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Desplegar al servidor
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.5
+        with:
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          server: ${{ secrets.SFTP_HOST }}
+          port: ${{ secrets.SFTP_PORT }}
+          remote_path: '/public_html'
+          sftp_only: true
