@@ -1,0 +1,17 @@
+/* Only adding styles that aren't already defined in the global CSS */
+
+/* Hero section specific styles */
+.hero-section {
+  min-height: 600px;
+}
+
+.hero-section img {
+  object-position: center bottom;
+}
+
+/* Additional styles if needed */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* If you need any specific overrides for this page */
