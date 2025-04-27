@@ -42,11 +42,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       <SwiperTop10 />
-
       <ExperienceSlider />
-
       <PartnersSection />
     </>
   );
