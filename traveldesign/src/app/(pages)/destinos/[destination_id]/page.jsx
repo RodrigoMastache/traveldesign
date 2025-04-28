@@ -2,7 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import PartnersSection from "@/app/components/PartnersSection";
 
-export default function KeniaPage() {
+export default async function KeniaPage({ params }) {
+  const { destination_id } = await params;
+
   return (
     <>
       <Head>
