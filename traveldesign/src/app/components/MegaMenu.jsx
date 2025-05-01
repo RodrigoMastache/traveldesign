@@ -1,9 +1,6 @@
 import Link from "next/link";
-import { destinationsData, experiencesData } from "../mockups/megaMenu";
 
-export default function MegaMenu({ title, type }) {
-  const data = type === "destinations" ? destinationsData : experiencesData;
-
+export default function MegaMenu({ data = {}, title }) {
   return (
     <li className="list-unstyled nav-item dropdown has-megamenu">
       <a className="nav-link" href="#" data-bs-toggle="dropdown">
@@ -18,8 +15,13 @@ export default function MegaMenu({ title, type }) {
                 {items.length > 0 && (
                   <ul>
                     {items.map((item) => (
-                      <li key={item}>
-                        <Link href="#">{item}</Link>
+                      <li key={item.documentId}>
+                        <Link
+                          href={`/destinos/${item.documentId}`}
+                          style={{ textTransform: "capitalize" }}
+                        >
+                          {item.country}
+                        </Link>
                       </li>
                     ))}
                   </ul>
