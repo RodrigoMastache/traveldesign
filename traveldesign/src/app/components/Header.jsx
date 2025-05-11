@@ -7,48 +7,49 @@ import { FiSearch } from "react-icons/fi";
 import MegaMenu from "./MegaMenu";
 import MobileMenu from "./MobileMenu";
 import { getMenuDestinations } from "../lib/destinations/get-menu-destinations";
+import { getMenuExperiences } from "../lib/experiences/get-menu-experiences";
 
 export default function Header() {
-  const [data, setData] = useState({});
+  const [destinations, setDestinations] = useState({});
   useEffect(() => {
     async function getDataAfrica() {
       const datos = await getMenuDestinations("africa");
-      setData((prev) => ({
+      setDestinations((prev) => ({
         ...prev,
         África: datos,
       }));
     }
     async function getDataAmerica() {
       const datos = await getMenuDestinations("america");
-      setData((prev) => ({
+      setDestinations((prev) => ({
         ...prev,
         América: datos,
       }));
     }
     async function getDataAsia() {
       const datos = await getMenuDestinations("asia");
-      setData((prev) => ({
+      setDestinations((prev) => ({
         ...prev,
         Asia: datos,
       }));
     }
     async function getDataEuropa() {
       const datos = await getMenuDestinations("europa");
-      setData((prev) => ({
+      setDestinations((prev) => ({
         ...prev,
         Europa: datos,
       }));
     }
     async function getDataOceania() {
       const datos = await getMenuDestinations("oceania");
-      setData((prev) => ({
+      setDestinations((prev) => ({
         ...prev,
         Oceanía: datos,
       }));
     }
     async function getDataOrienteMedio() {
       const datos = await getMenuDestinations("oriente-medio");
-      setData((prev) => ({
+      setDestinations((prev) => ({
         ...prev,
         "Oriente Medio": datos,
       }));
@@ -59,6 +60,26 @@ export default function Header() {
     getDataEuropa();
     getDataOceania();
     getDataOrienteMedio();
+  }, []);
+
+  const [experiences, setExperiences] = useState({});
+  useEffect(() => {
+    async function getDataLifestyle() {
+      const datos = await getMenuExperiences("lifestyle");
+      setExperiences((prev) => ({
+        ...prev,
+        Lifestyle: datos,
+      }));
+    }
+    async function getDataProfile() {
+      const datos = await getMenuExperiences("perfil");
+      setExperiences((prev) => ({
+        ...prev,
+        Perfil: datos,
+      }));
+    }
+    getDataLifestyle();
+    getDataProfile();
   }, []);
 
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -98,8 +119,16 @@ export default function Header() {
           </button>
 
           <div className="navbar-links d-none d-lg-flex">
-            <MegaMenu title="Destinos" type="destinations" data={data} />
-            <MegaMenu title="Experiencias" type="experiences" />
+            <MegaMenu
+              title="Destinos"
+              type="destinations"
+              data={destinations}
+            />
+            <MegaMenu
+              title="Experiencias"
+              type="experiences"
+              data={experiences}
+            />
             <Link className="nav-link" href="/nosotros">
               Nosotros
             </Link>

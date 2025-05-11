@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import PartnersSection from "@/app/components/PartnersSection";
 import { getDestination } from "../../../lib/destinations/get-destination";
 import { useParams } from "next/navigation";

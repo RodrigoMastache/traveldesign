@@ -1,3 +1,8 @@
+/*
+  item.country for destinations
+  item.name for experiences
+*/
+
 import Link from "next/link";
 
 export default function MegaMenu({ data = {}, title }) {
@@ -17,10 +22,10 @@ export default function MegaMenu({ data = {}, title }) {
                     {items.map((item) => (
                       <li key={item.documentId}>
                         <Link
-                          href={`/destinos/${item.documentId}`}
+                          href={`/${title.toLowerCase()}/${item.documentId}`}
                           style={{ textTransform: "capitalize" }}
                         >
-                          {item.country}
+                          {item.country || item.name}
                         </Link>
                       </li>
                     ))}
