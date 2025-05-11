@@ -126,3 +126,13 @@ if (link) {
   link.href = `${link.href}?v=${version}`;
 }
 
+// Carousel de logos
+const logosCarousel = document.querySelector('.logos-carousel');
+const logosSlide = document.querySelector('.logos-slide');
+if (logosCarousel && logosSlide) {
+  [1, 2, 3].forEach(() => {
+    const copy = logosSlide.cloneNode(true);
+    logosCarousel.appendChild(copy);
+  });
+}
+
