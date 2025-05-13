@@ -3,21 +3,21 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import PartnersSection from "@/app/components/PartnersSection";
-import { getDestination } from "../../../lib/destinations/get-destination";
+import { getExperience } from "../../../lib/experiences/get-experience";
 import { useParams } from "next/navigation";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import Carousel from "@/app/components/Swiper";
 
-export default function Index() {
+export default function KeniaPage() {
   const params = useParams();
-  const destination_id = params.destination_id;
+  const experience_id = params.experience_id;
 
   const [data, setData] = useState({});
 
   useEffect(() => {
-    if (destination_id) {
+    if (experience_id) {
       async function getData() {
-        const datos = await getDestination(destination_id);
+        const datos = await getExperience(experience_id);
         setData(datos);
       }
       getData();
@@ -27,7 +27,7 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>{data?.country} | Travel Design</title>
+        <title>Title | Travel Design</title>
         <meta
           name="description"
           content="Descubre Kenia y la reserva Masái Mara con Travel Design"
@@ -45,7 +45,10 @@ export default function Index() {
               <img src={data?.bannerUrl} alt="Kenia - Masái Mara" />
             )}
             <div className="overlay d-flex align-items-center justify-content-center">
-              <h1 className="text-center text-white">{data?.country}</h1>
+              <h1 className="text-center text-white">
+                <span>{data.country}</span>
+                {data.name}
+              </h1>
             </div>
           </div>
         </section>
@@ -152,10 +155,9 @@ export default function Index() {
             </div>
           </div>
         </section>
-
         <Carousel
           swiper="swiper-cards-slider"
-          title={`Más destinos de ${data?.continent}`}
+          title={`Más experiencias de ${data?.country}`}
         />
         <PartnersSection />
       </main>

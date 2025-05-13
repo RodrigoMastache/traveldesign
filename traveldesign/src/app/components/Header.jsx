@@ -78,8 +78,16 @@ export default function Header() {
         Perfil: datos,
       }));
     }
+    async function getDataTemporada() {
+      const datos = await getMenuExperiences("temporada");
+      setExperiences((prev) => ({
+        ...prev,
+        Temporada: datos,
+      }));
+    }
     getDataLifestyle();
     getDataProfile();
+    getDataTemporada();
   }, []);
 
   const [isSearchOpen, setIsSearchOpen] = useState(false);

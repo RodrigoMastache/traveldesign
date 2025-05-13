@@ -9,16 +9,16 @@ import PartnersSection from "@/app/components/PartnersSection";
 import { getExperiencesByProfile } from "../../../lib/experiences/get-experiences";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
-export default function SafariPage() {
+export default function Index() {
   const params = useParams();
-  const experience_id = params.experience_id;
+  const profile_id = params.profile_id;
 
   const [data, setData] = useState({});
 
   useEffect(() => {
-    if (experience_id) {
+    if (profile_id) {
       async function getData() {
-        const datos = await getExperiencesByProfile(experience_id);
+        const datos = await getExperiencesByProfile(profile_id);
         setData(datos);
       }
       getData();

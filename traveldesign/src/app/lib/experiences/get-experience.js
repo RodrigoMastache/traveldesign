@@ -8,30 +8,30 @@ const IMAGE_KEYS = [
   { key: "recimage", urlProp: "recImageUrl" },
 ];
 
-export async function getDestination(documentId) {
+export async function getExperience(documentId) {
   const res = await query(
-    `destinations?filters[documentId][$eq]=${documentId}&locale=es-MX&populate=banner&populate=intimage&populate=actimage&populate=accimage&populate=recimage&populate[0]=experiences&populate[1]=experiences.details&populate[2]=experiences.details.banner`
+    `experiences?filters[documentId][$eq]=${documentId}&locale=es-MX&populate=banner&populate=intimage&populate=actimage&populate=accimage&populate=recimage`
   );
 
-  const destination = res.data[0];
+  const experience = res.data[0];
 
-  if (!destination) return null;
+  if (!experience) return null;
 
   IMAGE_KEYS.forEach(({ key, urlProp }) => {
-    const imageArray = destination[key];
+    const imageArray = experience[key];
     if (imageArray) {
-      destination[
+      experience[
         urlProp
       ] = `${process.env.NEXT_PUBLIC_STRAPI_HOST}${imageArray.url}`;
     } else {
-      destination[urlProp] =
+      experience[urlProp] =
         "https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg";
     }
   });
 
-  // destination.experiences.map((experience) => {
-  //   experience.cover = `${process.env.NEXT_PUBLIC_STRAPI_HOST}${experience.details.banner.url}`;
-  // });
+  //   destination.experiences.map((experience) => {
+  //     experience.cover = `${process.env.NEXT_PUBLIC_STRAPI_HOST}${experience.details.banner.url}`;
+  //   });
 
-  return destination;
+  return experience;
 }
