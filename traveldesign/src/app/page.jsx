@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <SwiperHero />
       <section className="info-home section-padding">
         <div className="container">
@@ -43,6 +43,6 @@ export default function Home() {
       </section>
       <SwiperTop10 />
       <ExperienceSlider />
-    </>
+    </div>
   );
 }

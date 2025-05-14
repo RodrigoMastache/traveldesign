@@ -6,9 +6,9 @@ import BootstrapProvider from "@/app/providers/bootstrap-provider";
 import "./globals.css";
 
 const poppins = Poppins({
-  subsets: ["latin"], // Puedes agregar 'latin-ext' si quieres más caracteres
-  weight: ["400", "600", "700"], // Especifica los pesos que vas a usar
-  display: "swap", // Mejora la carga de fuentes
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  display: "swap",
 });
 
 export const metadata = {

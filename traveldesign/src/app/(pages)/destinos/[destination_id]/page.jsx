@@ -2,7 +2,10 @@
 
 import { useEffect, useState } from "react";
 import Head from "next/head";
-import { getDestination } from "../../../lib/destinations/get-destination";
+import {
+  getDestination,
+  getDestinationByContinent,
+} from "../../../lib/destinations/get-destination";
 import { useParams } from "next/navigation";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import Carousel from "@/app/components/Swiper";
@@ -12,12 +15,19 @@ export default function Index() {
   const destination_id = params.destination_id;
 
   const [data, setData] = useState({});
+  const [moreDestinations, setDestinations] = useState();
 
   useEffect(() => {
     if (destination_id) {
+      async function getDataByContinent(continent, country) {
+        const datos = await getDestinationByContinent(continent, country);
+        setDestinations(datos);
+      }
+
       async function getData() {
         const datos = await getDestination(destination_id);
         setData(datos);
+        getDataByContinent(datos?.continent, datos?.country);
       }
       getData();
     }
@@ -155,6 +165,7 @@ export default function Index() {
         <Carousel
           swiper="swiper-cards-slider"
           title={`Más destinos de ${data?.continent}`}
+          data={moreDestinations}
         />
       </main>
     </>

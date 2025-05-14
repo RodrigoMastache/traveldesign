@@ -35,3 +35,26 @@ export async function getDestination(documentId) {
 
   return destination;
 }
+
+export async function getDestinationByContinent(continent, country) {
+  const res = await query(
+    `destinations?filters[continent][$eq]=${continent}&locale=es-MX&populate[0]=banner`
+  );
+
+  const data = res.data;
+
+  const destinations = data.filter((item) => item.country !== country);
+
+  if (!destinations) return null;
+
+  destinations?.map((destination) => {
+    if (destination.banner) {
+      destination.cover = `${process.env.NEXT_PUBLIC_STRAPI_HOST}${destination.banner.url}`;
+    } else {
+      destination.cover =
+        "https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg";
+    }
+  });
+
+  return destinations;
+}
