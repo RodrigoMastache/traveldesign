@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Head from "next/head";
-import PartnersSection from "@/app/components/PartnersSection";
 import { getExperience } from "../../../lib/experiences/get-experience";
 import { useParams } from "next/navigation";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
@@ -159,7 +158,6 @@ export default function KeniaPage() {
           swiper="swiper-cards-slider"
           title={`Más experiencias de ${data?.country}`}
         />
-        <PartnersSection />
       </main>
     </>
   );

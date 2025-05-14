@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Head from "next/head";
-import PartnersSection from "@/app/components/PartnersSection";
 import { getDestination } from "../../../lib/destinations/get-destination";
 import { useParams } from "next/navigation";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
@@ -157,7 +156,6 @@ export default function Index() {
           swiper="swiper-cards-slider"
           title={`Más destinos de ${data?.continent}`}
         />
-        <PartnersSection />
       </main>
     </>
   );

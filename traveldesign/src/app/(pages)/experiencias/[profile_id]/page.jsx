@@ -5,7 +5,6 @@ import { useParams } from "next/navigation";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import PartnersSection from "@/app/components/PartnersSection";
 import { getExperiencesByProfile } from "../../../lib/experiences/get-experiences";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
@@ -160,7 +159,6 @@ export default function Index() {
             </div> */}
           </div>
         </section>
-        <PartnersSection />
       </main>
     </>
   );

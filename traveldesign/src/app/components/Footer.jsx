@@ -55,7 +55,7 @@ export default function Footer() {
                     </Link>
                   </p>
                   <p>
-                    <Link className="underline" href="#">
+                    <Link className="underline" href="/politicas-de-privacidad">
                       Aviso de privacidad
                     </Link>
                   </p>
