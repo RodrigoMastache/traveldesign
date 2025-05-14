@@ -1,7 +1,6 @@
 import SwiperHero from "@/app/components/SwiperHero";
 import SwiperTop10 from "@/app/components/SwiperTop10";
 import ExperienceSlider from "@/app/components/ExperienceSlider";
-import PartnersSection from "@/app/components/PartnersSection";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -44,7 +43,6 @@ export default async function Home() {
       </section>
       <SwiperTop10 />
       <ExperienceSlider />
-      <PartnersSection />
     </>
   );
 }

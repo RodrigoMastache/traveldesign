@@ -1,38 +1,36 @@
+// import logo1 from "../../../../assets/img/logo-footer-1.png";
 import Image from "next/image";
 
 export default function PartnersSection() {
+  const logos = [
+    {
+      id: 10,
+      image: "/assets/img/logo-footer-1.png",
+    },
+    {
+      id: 20,
+      image: "/assets/img/logo-footer-2.png",
+    },
+    {
+      id: 30,
+      image: "/assets/img/logo-footer-3.png",
+    },
+    {
+      id: 40,
+      image: "/assets/img/logo-footer-4.png",
+    },
+  ];
+
   return (
     <section className="pre-footer section-padding">
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <section className="d-flex flex-wrap justify-content-around justify-content-md-between align-items-center gap-4">
-              <Image
-                src="/assets/img/logo-four-seasons.png"
-                width={150}
-                height={80}
-                className="img-fluid mb-3 mb-md-0"
-                alt="Four Seasons - Hotels and Resorts"
-              />
-              <div className="vr my-0 d-none d-md-block"></div>
-              <Image
-                src="/assets/img/logo-virtuoso-b.png"
-                width={150}
-                height={80}
-                className="img-fluid mb-3 mb-md-0"
-                alt="Virtuoso Member"
-              />
-              <div className="vr my-0 d-none d-md-block"></div>
-              <Image
-                src="/assets/img/logo-marriot.png"
-                width={150}
-                height={80}
-                className="img-fluid mb-3 mb-md-0"
-                alt="Marriot international Stars"
-              />
-            </section>
+      <div className="logos-carousel">
+        {logos.map((item) => (
+          <div key={item.id} className="logos-slide">
+            {logos.map((logo) => (
+              <img key={logo.id} src={logo.image} alt="logo" />
+            ))}
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );
