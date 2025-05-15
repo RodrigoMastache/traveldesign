@@ -161,12 +161,14 @@ export default function Index() {
             </div>
           </div>
         </section>
-
-        <Carousel
-          swiper="swiper-cards-slider"
-          title={`Más destinos de ${data?.continent}`}
-          data={moreDestinations}
-        />
+        {Boolean(moreDestinations?.length) && (
+          <Carousel
+            swiper="swiper-cards-slider"
+            title={`Más destinos de ${data?.continent}`}
+            data={moreDestinations}
+            type="destinations"
+          />
+        )}
       </main>
     </>
   );

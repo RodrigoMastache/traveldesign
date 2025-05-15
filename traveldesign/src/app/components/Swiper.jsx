@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const Index = ({ swiper, title, data }) => {
+const Index = ({ swiper, title, data, type }) => {
   useEffect(() => {
     new Swiper(`.${swiper}`, {
       modules: [Navigation, Pagination],
@@ -41,7 +41,9 @@ const Index = ({ swiper, title, data }) => {
                   <div key={item.documentId} className="swiper-slide">
                     <a href="#">
                       <img src={item?.cover} className="img-fluid" alt="" />
-                      <span className="image-title">{item?.country}</span>
+                      <span className="image-title">
+                        {type === "destinations" ? item?.country : item?.name}
+                      </span>
                     </a>
                   </div>
                 ))}

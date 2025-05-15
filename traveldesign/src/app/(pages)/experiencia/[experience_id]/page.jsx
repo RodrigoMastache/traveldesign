@@ -2,7 +2,10 @@
 
 import { useEffect, useState } from "react";
 import Head from "next/head";
-import { getExperience } from "../../../lib/experiences/get-experience";
+import {
+  getExperience,
+  getExperiencesByCountry,
+} from "../../../lib/experiences/get-experience";
 import { useParams } from "next/navigation";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import Carousel from "@/app/components/Swiper";
@@ -12,16 +15,25 @@ export default function KeniaPage() {
   const experience_id = params.experience_id;
 
   const [data, setData] = useState({});
+  const [moreExperiences, setExperiences] = useState();
 
   useEffect(() => {
     if (experience_id) {
+      async function getDataByCountry(country, experienceName) {
+        const datos = await getExperiencesByCountry(country, experienceName);
+        setExperiences(datos);
+      }
+
       async function getData() {
         const datos = await getExperience(experience_id);
         setData(datos);
+        getDataByCountry(datos?.country, datos?.name);
       }
       getData();
     }
   }, []);
+
+  console.log("moreExperiences", moreExperiences);
 
   return (
     <>
@@ -154,10 +166,14 @@ export default function KeniaPage() {
             </div>
           </div>
         </section>
-        <Carousel
-          swiper="swiper-cards-slider"
-          title={`Más experiencias de ${data?.country}`}
-        />
+        {Boolean(moreExperiences?.length) && (
+          <Carousel
+            swiper="swiper-cards-slider"
+            title={`Más experiencias de ${data?.country}`}
+            data={moreExperiences}
+            type="experiences"
+          />
+        )}
       </main>
     </>
   );
