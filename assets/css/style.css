@@ -942,9 +942,8 @@ footer {
 /* } */
 
 /* Contacto */
-
 .section-contacto{
-    h1{
+    & h1{
         letter-spacing: 2px;
         font-weight: 300;
         font-size: 1.7rem;
@@ -952,13 +951,37 @@ footer {
         margin-bottom: 3rem;
     }
 
-    form{
-        input, textarea{
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
-            letter-spacing: 3px;
-        }
+    & .calendar-container {
+          display: none;
     }
+
+    & .tags-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-top: 0.5rem;
+
+        & .tag {
+          display: inline-flex;
+          align-items: center;
+          background-color: #000000;
+          color: #FFFFFF;
+          padding: 5px 10px;
+          border-radius: 15px;
+          font-size: 14px;
+          
+            & .remove-tag {
+          margin-left: 5px;
+          cursor: pointer;
+          color: #dc3545;
+            }
+        }
+      }
+
+      & .clear-all-tags {
+          cursor: pointer;
+          color: #dc3545;
+      }
 }
 
 

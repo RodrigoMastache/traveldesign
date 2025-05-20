@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="es-MX">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +8,6 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
   <header class="position-relative">
@@ -354,57 +352,316 @@
     </section>
   </header>
   <main>
-
 <section class="section-contacto section-padding">
     <div class="container">
         <div class="row">
             <div class="col">
               <h1>Comienza a planear tu viaje</h1>
-                <form>
-                    <div class="row mb-3 row-gap-3">
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Nombre Completo">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="email" class="form-control" placeholder="Correo electrónico">
-                        </div>
-                    </div>
-
-                    <div class="row mb-3 row-gap-3">
-                        <div class="col-md-6">
-                            <input type="tel" class="form-control" placeholder="Teléfono">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Ciudad">
-                        </div>
-                    </div>
-
-                    <div class="mb-3 ">
-                        <input type="text" class="form-control" placeholder="Destino de su próximo viaje">
-                    </div>
-
-                    <div class="row mb-3 row-gap-3">
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Fecha en la que planea viajar">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="¿Con quién viaja?">
-                        </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <textarea class="form-control" rows="4" placeholder="Comentarios adicionales"></textarea>
-                    </div>
-
-                    <div class="mb-3 d-flex justify-content-center">
-                        <button type="submit" class="btn-negro">Enviar</button>
-                        
-                    </div>
-                </form>
+              <p>En <strong>Travel Design</strong>, creamos experiencias de viaje exclusivas y a la medida, diseñadas para cumplir las más altas exigencias. Nuestro equipo de expertos en viajes de lujo se pondrá en contacto contigo para personalizar cada detalle de tu itinerario, asegurando una experiencia privada y única, adaptada a tus expectativas.</p>
+              <p>completa el tormulario con la mayor cantidad de intormacion posible y permitenos disenar un viale excepcional, donde cada momento refleje exclusividad, confort y excelencia.</p>
             </div>
         </div>
     </div>
+  <div class="container mt-5">
+    <form class="needs-validation" novalidate>
+        <!-- Pregunta 1: Destinos -->
+        <div class="mb-4">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <label for="destinos" class="form-label fw-bold">¿Cuál(es) es el destino(s) que quieres descubrir en tu próximo viaje?</label>
+            </div>
+            <div class="col-12 col-md-6">
+              <select class="form-select border-0 border-bottom rounded-0" id="destinos" name="destinos">
+                    <option value="" disabled selected>Selecciona uno o más por favor</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Kenia">Kenia</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Marruecos">Marruecos</option>
+                    <option value="Namibia">Namibia</option>
+                    <option value="Playas de África">Playas de África</option>
+                    <option value="Ruanda">Ruanda</option>
+                    <option value="Sudáfrica">Sudáfrica</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                    <option value="Ártico noruego">Ártico noruego</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Croacia">Croacia</option>
+                    <option value="Escocia">Escocia</option>
+                    <option value="España">España</option>
+                    <option value="Finlandia">Finlandia</option>
+                    <option value="Francia">Francia</option>
+                    <option value="Grecia">Grecia</option>
+                    <option value="Hungría">Hungría</option>
+                    <option value="Italia">Italia</option>
+                    <option value="Islandia">Islandia</option>
+                    <option value="Montenegro">Montenegro</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="República Checa">República Checa</option>
+                    <option value="Rumanía">Rumanía</option>
+                    <option value="Suiza">Suiza</option>
+                    <option value="Turquía">Turquía</option>
+                    <option value="Antártida">Antártida</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Canadá">Canadá</option>
+                    <option value="Caribe">Caribe</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Estados Unidos">Estados Unidos</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="México">México</option>
+                    <option value="Perú">Perú</option>
+                    <option value="Bután">Bután</option>
+                    <option value="Camboya">Camboya</option>
+                    <option value="China">China</option>
+                    <option value="Corea del Sur">Corea del Sur</option>
+                    <option value="Filipinas">Filipinas</option>
+                    <option value="India">India</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Japón">Japón</option>
+                    <option value="Laos">Laos</option>
+                    <option value="Malasia">Malasia</option>
+                    <option value="Maldivas">Maldivas</option>
+                    <option value="Mongolia">Mongolia</option>
+                    <option value="Myanmar">Myanmar</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="Tailandia">Tailandia</option>
+                    <option value="Tibet y Nepal">Tibet y Nepal</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="Arabia Saudita">Arabia Saudita</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Emiratos Árabes">Emiratos Árabes</option>
+                    <option value="Egipto">Egipto</option>
+                    <option value="Israel">Israel</option>
+                    <option value="Jordania">Jordania</option>
+                    <option value="Omán">Omán</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Nueva Zelanda">Nueva Zelanda</option>
+                    <option value="Polinesia Francesa">Polinesia Francesa</option>
+                </select>
+              </div>
+          </div>
+            <div class="tags-container" id="tagsContainer"></div>
+            <span class="clear-all-tags mt-2" style="display: none;">&#10006; Borrar selecciones</span>
+            <input type="hidden" id="destinosHidden" name="destinosHidden" required>
+            <div class="invalid-feedback">
+                Por favor, selecciona al menos un destino.
+            </div>
+        </div>
 
+        <!-- Pregunta 2: Tipo de viaje -->
+        <div class="mb-4">
+          <div class="row gy-2">
+            <div class="col-12">
+              <label class="form-label fw-bold">¿Qué tipo de viaje te gustaría realizar? <span class="fw-light">Puedes seleccionar varias opciones.</span></label>
+            </div>
+            <div class="col-12">
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" name="tipoViaje" value="Aventura" id="tipoAventura">
+                <label class="form-check-label" for="tipoAventura">Aventura</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" name="tipoViaje" value="Cultura y Arte" id="tipoCultura">
+                <label class="form-check-label" for="tipoCultura">Cultura y Arte</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" name="tipoViaje" value="Gastronómico" id="tipoGastronomico">
+                <label class="form-check-label" for="tipoGastronomico">Gastronómico</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" name="tipoViaje" value="Crucero" id="tipoCrucero">
+                <label class="form-check-label" for="tipoCrucero">Crucero</label>
+            </div>
+            <div class="invalid-feedback">
+                Por favor, selecciona al menos un tipo de viaje.
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pregunta 3: Fechas definidas -->
+        <div class="mb-4">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <label class="form-label fw-bold">¿Tienes alguna fecha definida para hacer el viaje?</label>
+            </div>
+            <div class="col-12 col-md-6">
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="fechasDefinidas" value="si" id="fechasSi" required>
+                <label class="form-check-label" for="fechasSi">Sí tengo las fechas exactas</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" name="fechasDefinidas" value="no" id="fechasNo" required>
+                <label class="form-check-label" for="fechasNo">Aún no lo defino</label>
+            </div>
+            <div class="invalid-feedback">
+                Por favor, selecciona una opción.
+            </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+
+            <!-- Calendario dinámico -->
+            <div class="calendar-container mt-3" id="calendarContainer">
+                <div class="row gy-3">
+                    <div class="col-12 col-md-6">
+                        <label for="fechaSalida" class="form-label fst-italic">Fecha de salida</label>
+                        <input type="date" class="form-control" id="fechaSalida" name="fechaSalida">
+                        <div class="invalid-feedback">
+                            Por favor, selecciona una fecha de salida.
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="fechaRegreso" class="form-label fst-italic">Fecha de regreso</label>
+                        <input type="date" class="form-control" id="fechaRegreso" name="fechaRegreso">
+                        <div class="invalid-feedback">
+                            Por favor, selecciona una fecha de regreso.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+            
+
+
+        </div>
+
+        <!-- Pregunta 4: Con quién viajas -->
+        <div class="mb-4">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <label class="form-label fw-bold">¿Con quién(es) viajas?</label>
+            </div>
+            <div class="col-12 col-md-6">
+            <div class="row gy-3">
+                <div class="col-md-6">
+                    <select class="form-select border-0 border-bottom rounded-0" id="adultos" name="adultos" required>
+                        <option value="" disabled selected>Adultos</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5+</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Por favor, selecciona el número de adultos.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <select class="form-select border-0 border-bottom rounded-0" id="ninos" name="ninos" required>
+                        <option value="" disabled selected>Niños</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4+</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Por favor, selecciona el número de niños.
+                    </div>
+                </div>
+            </div>
+            </div>
+          </div>
+            
+
+        </div>
+
+        <!-- Pregunta 5: Presupuesto -->
+        <div class="mb-4">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <label for="presupuesto" class="form-label fw-bold">¿Cuál es el presupuesto planeado para invertir en tu viaje? (MXN)</label>
+            </div>
+            <div class="col-12 col-md-6">
+            <select class="form-select border-0 border-bottom rounded-0" id="presupuesto" name="presupuesto" required>
+                <option value="" disabled selected>Selecciona un rango por favor</option>
+                <option value="0-10000">Hasta $10,000</option>
+                <option value="10001-20000">$10,001 - $20,000</option>
+                <option value="20001-30000">$20,001 - $30,000</option>
+                <option value="30001-40000">$30,001 - $40,000</option>
+                <option value="40001-50000">$40,001 - $50,000</option>
+                <option value="50001+">$50,001 o más</option>
+            </select>
+            <div class="invalid-feedback">
+                Por favor, selecciona un rango de presupuesto.
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pregunta 6: Descripción -->
+        <div class="mb-4">
+          <div class="row">
+            <div class="col-12">
+            <label for="descripcion" class="form-label fw-bold">Descríbenos la experiencia que deseas vivir</label>
+            <textarea class="form-control" id="descripcion" maxlength="250" name="descripcion" rows="3" placeholder="Incluye información como edades de tus acompañantes y actividades que te gustaría realizar" required></textarea>
+            <div class="invalid-feedback">
+                Por favor, describe la experiencia que deseas vivir.
+            </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Pregunta 7: Contacto -->
+        <div class="mb-4">
+          <div class="row g-3">
+            <label class="form-label fw-bold">¿Dónde puede contactarte nuestro experto en viajes?</label>
+            <div class="col-12">
+              <input type="text" class="form-control border-0 border-bottom rounded-0" id="nombre" maxlength="50" name="nombre" placeholder="Nombre completo *" required>
+              <div class="invalid-feedback">
+                Por favor, ingresa tu nombre completo.
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <input type="email" class="form-control border-0 border-bottom rounded-0" id="email" maxlength="50" name="email" placeholder="E-mail *" required>
+                <div class="invalid-feedback">
+                    Por favor, ingresa un correo electrónico válido.
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <input type="tel" class="form-control border-0 border-bottom rounded-0" id="telefono" maxlength="10" name="telefono" placeholder="Teléfono *" required>
+                <div class="invalid-feedback">
+                  Por favor, ingresa tu número de teléfono.
+                </div>              
+            </div>
+            <div class="col-12 col-md-6">
+                <input type="text" class="form-control border-0 border-bottom rounded-0" id="pais" maxlength="25" name="pais" placeholder="Pais (opcional)">
+            </div>
+            <div class="col-12 col-md-6">
+                <input type="text" class="form-control border-0 border-bottom rounded-0" id="ciudad" maxlength="25" name="ciudad" placeholder="Ciudad (opcional)">
+            </div>
+            <div class="col-12">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="actualizaciones" name="actualizaciones">
+                <label class="form-check-label small" for="actualizaciones">Deseo recibir las últimas actualizaciones sobre viajes y entiendo que puedo cancelar mi suscripción en cualquier momento.</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="privacidad" name="privacidad" required>
+                <label class="form-check-label small" for="privacidad">He leído y acepto la <a href="#" target="_blank" class="text-dark">Política de Privacidad y protección de datos</a> *</label>
+                <div class="invalid-feedback">
+                    Debes aceptar la política de privacidad.
+                </div>
+            </div>     
+            </div>
+          </div>
+          
+
+        </div>
+
+        <!-- Botón Enviar -->
+        <button type="submit" class="btn-negro">ENVIAR</button>
+    </form>
+</div>
 </section>
 
     <section class="pre-footer section-padding">
@@ -468,6 +725,5 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
-
 </body>
 </html>
