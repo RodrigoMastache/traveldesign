@@ -1,0 +1,61 @@
+{
+  "home": {
+    "main": {
+      "hero": {
+        "btn-text": "Planifica tu viaje"
+      },
+      "introduction": {
+        "description-1": "Cada viaje es una obra de arte creada para ti. No solo planeamos itinerarios, diseñamos experiencias que envuelven tus sentidos en un lujo irresistible. Desde destinos exóticos hasta rincones exclusivos, te llevamos más allá de lo convencional, ofreciéndote el privilegio de explorar el mundo con estilo y sofisticación",
+        "description-2": "Descubre el lujo hecho a tu medida. Permítete ser cautivado por la elegancia de cada detalle, y vive la esencia de viajar como nunca antes.",
+        "btn-text": "Comienza a planear tu viaje"
+      }
+    },
+    "top-destinations-section": {
+      "title": "Top 10 Destinos"
+    },
+    "experiences-section": {
+      "title": "Experiencias inolvidables"
+    }
+  },
+  "header": {
+    "destinations": "destinos",
+    "experiences": "experiencias",
+    "about-us": "nosotros",
+    "contact": "contacto",
+    "blog": "blog",
+    "search": "buscar"
+  },
+  "footer": {
+    "address": {
+      "title": "Ubicación"
+    },
+    "contact": {
+      "title": "Contacto"
+    },
+    "frequent-questions": {
+      "title": "Preguntas Frecuentes"
+    },
+    "private-notice": {
+      "title": "Aviso de Privacidad"
+    },
+    "termns-conditions": {
+      "title": "Términos y Condiciones"
+    }
+  },
+  "titles": {
+    "articles": {
+      "activities": "¿qué hacer?",
+      "accommodations": "¿dónde quedarte?",
+      "recommendations": "recomendaciones"
+    }
+  },
+  "ctas": {
+    "articles": {
+      "start": "Comienza a planear tu viaje"
+    },
+    "experiences": {
+      "start": "Planea tu viaje",
+      "more-details": "Ver experiencia"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "home": {
+    "main": {
+      "hero": {
+        "btn-text": "Plan your trip"
+      },
+      "introduction": {
+        "description-1": "Every trip is a work of art created for you. We don't just plan itineraries, we design experiences that envelop your senses in irresistible luxury. From exotic destinations to exclusive corners, we take you beyond the conventional, offering you the privilege of exploring the world with style and sophistication.",
+        "description-2": "Discover luxury tailored to your needs. Allow yourself to be captivated by the elegance of every detail, and live the essence of travel like never before.",
+        "btn-text": "Start planning your trip"
+      }
+    },
+    "top-destinations-section": {
+      "title": "Top 10 Destinations"
+    },
+    "experiences-section": {
+      "title": "Unforgettable experiences"
+    }
+  },
+  "header": {
+    "destinations": "destinations",
+    "experiences": "experiences",
+    "about-us": "about us",
+    "contact": "contact",
+    "blog": "blog",
+    "search": "search"
+  },
+  "footer": {
+    "address": {
+      "title": "Address"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "frequent-questions": {
+      "title": "Frequent Questions"
+    },
+    "private-notice": {
+      "title": "Privacy Policy"
+    },
+    "termns-conditions": {
+      "title": "Terms and Conditions"
+    }
+  },
+  "titles": {
+    "articles": {
+      "activities": "What to do?",
+      "accommodations": "where to stay?",
+      "recommendations": "recommendations"
+    }
+  },
+  "ctas": {
+    "articles": {
+      "start": "Start planning your trip"
+    },
+    "experiences": {
+      "start": "Plan your trip",
+      "more-details": "See experience"
+    }
+  }
+}
