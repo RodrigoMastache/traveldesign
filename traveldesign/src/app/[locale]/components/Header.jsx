@@ -8,8 +8,7 @@ import MegaMenu from "./MegaMenu";
 import MobileMenu from "./MobileMenu";
 import { getMenuDestinations } from "../lib/destinations/get-menu-destinations";
 import { getMenuExperiences } from "../lib/experiences/get-menu-experiences";
-import { useTranslations } from "next-intl";
-import { useLocale } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function Header() {
   const t = useTranslations("header");

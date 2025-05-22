@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect } from "react";
 import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
@@ -7,7 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const Index = ({ swiper, title, data, type }) => {
+const Index = ({ swiper, title, data, type, pathByItem = "/" }) => {
   useEffect(() => {
     new Swiper(`.${swiper}`, {
       modules: [Navigation, Pagination],
@@ -39,12 +40,12 @@ const Index = ({ swiper, title, data, type }) => {
               <div className="swiper-wrapper">
                 {data?.map((item) => (
                   <div key={item.documentId} className="swiper-slide">
-                    <a href="#">
+                    <Link href={`${pathByItem}${item.documentId}`}>
                       <img src={item?.cover} className="img-fluid" alt="" />
                       <span className="image-title">
                         {type === "destinations" ? item?.country : item?.name}
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>

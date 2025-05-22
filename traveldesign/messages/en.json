@@ -47,6 +47,12 @@
       "activities": "What to do?",
       "accommodations": "where to stay?",
       "recommendations": "recommendations"
+    },
+    "destinations": {
+      "carousel-title": "more destinations of"
+    },
+    "experiences": {
+      "carousel-title": "more experiences of"
     }
   },
   "ctas": {
@@ -57,5 +63,27 @@
       "start": "Plan your trip",
       "more-details": "See experience"
     }
+  },
+  "about-us": {
+    "title": "Know our history",
+    "carousel-title": "Unforgettable experiences",
+    "sec-1": "was born with a clear purpose: to transform the way travel is experienced. We didn't want to simply sell tickets or reservations; we wanted to design experiences that would remain forever in the memory. From the beginning, we set out to accompany each traveler in the creation of unique memories, with the certainty that every detail will turn out the way you dreamed it - or even better.",
+    "sec-2": "Although Travel Design took shape as such in 2017, the experience behind us has much deeper roots. Our founder has been dedicated to the world of travel for more than three decades, perfecting the art of anticipating what the traveler needs, even before they ask for it. That trajectory, built with dedication, sacrifice and passion, is the foundation of everything we are today.",
+    "sec-3": "We know that a trip is much more than a destination. It is the illusion that begins from the moment it is imagined, the excitement of the preparations, and the tranquility of knowing that everything is under control. That's why we focus on creating worry-free trips, where each itinerary is tailor-made, taking care of every detail with precision and anticipating every need.",
+    "sec-4": "At Travel Design we live and breathe luxury, but not as a synonym of ostentation, but as a way of traveling with purpose, with comfort, with authenticity. We understand luxury as the art of traveling well: without improvisations, with personalized attention and experiences that cannot be found in a common catalog.",
+    "sec-5": "What sets us apart is the spirit in which we work. We don't sell trips; we design experiences. And behind every trip, there are hours of dedication, years of knowledge, and a deep commitment to our travelers. Because every itinerary that leaves our hands, carries a little piece of our history, our passion and why we started this journey.",
+    "sec-6": "If you've ever dreamed of a trip that feels as much your own as your story, you're in the right place. Here, every experience is designed with you and for you.",
+    "faqs": {
+      "q1": {
+        "question": "Why hire a travel agency?",
+        "answer": ""
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Start planning your trip",
+    "desc-1": "At Travel Design, we create exclusive, tailor-made travel experiences designed to meet the highest standards. Our team of luxury travel experts will contact you to customize every detail of your itinerary, ensuring a private and unique experience tailored to your expectations.",
+    "desc-2": "complete the itinerary with as much information as possible and allow us to design an exceptional journey, where every moment reflects exclusivity, comfort and excellence."
   }
 }

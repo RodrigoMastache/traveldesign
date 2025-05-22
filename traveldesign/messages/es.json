@@ -47,6 +47,12 @@
       "activities": "¿qué hacer?",
       "accommodations": "¿dónde quedarte?",
       "recommendations": "recomendaciones"
+    },
+    "destinations": {
+      "carousel-title": "Más destinos de"
+    },
+    "experiences": {
+      "carousel-title": "Más experiencias de"
     }
   },
   "ctas": {
@@ -57,5 +63,27 @@
       "start": "Planea tu viaje",
       "more-details": "Ver experiencia"
     }
+  },
+  "about-us": {
+    "title": "Conoce nuestra historia",
+    "carousel-title": "Experiencias inolvidables",
+    "sec-1": "nace con un propósito claro: transformar la manera en la que se vive un viaje. No queríamos simplemente vender boletos o reservas; queríamos diseñar experiencias que permanecieran para siempre en la memoria. Desde el inicio, nos propusimos acompañar a cada viajero en la creación de recuerdos únicos, con la certeza de que cada detalle saldrá como lo soñó —o incluso mejor.",
+    "sec-2": "Aunque Travel Design tomó forma como tal en 2017, la experiencia que nos respalda tiene raíces mucho más profundas. Nuestra fundadora lleva más de tres décadas dedicada al mundo de los viajes, perfeccionando el arte de anticiparse a lo que el viajero necesita, incluso antes de que lo pida. Esa trayectoria, construida con dedicación, sacrificio y pasión, es la base de todo lo que somos hoy.",
+    "sec-3": "Sabemos que un viaje es mucho más que un destino. Es la ilusión que comienza desde el momento en que se imagina, la emoción de los preparativos, y la tranquilidad de saber que todo está bajo control. Por eso, nos enfocamos en crear viajes sin preocupaciones, donde cada itinerario esté diseñado a la medida, cuidando los detalles con precisión y anticipando cualquier necesidad.",
+    "sec-4": "En Travel Design vivimos y respiramos lujo, pero no como sinónimo de ostentación, sino como una forma de viajar con propósito, con comodidad, con autenticidad. Entendemos el lujo como el arte de viajar bien: sin improvisaciones, con atención personalizada y experiencias que no se encuentran en un catálogo común.",
+    "sec-5": "Lo que nos diferencia es el espíritu con el que trabajamos. No vendemos viajes; diseñamos experiencias. Y detrás de cada viaje, hay horas de dedicación, años de conocimiento, y un profundo compromiso con nuestros viajeros. Porque cada itinerario que sale de nuestras manos, lleva un pedacito de nuestra historia, de nuestra pasión y del por qué empezamos este camino.",
+    "sec-6": "Si alguna vez soñaste con un viaje que se sintiera tan tuyo como tu historia, estás en el lugar correcto. Aquí, cada experiencia se diseña contigo y para ti.",
+    "faqs": {
+      "q1": {
+        "question": "¿Por qué contratar una agencia de viajes?",
+        "answer": ""
+      }
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Comienza a planear tu viaje",
+    "desc-1": "En Travel Design, creamos experiencias de viaje exclusivas y a la medida, diseñadas para cumplir las más altas exigencias. Nuestro equipo de expertos en viajes de lujo se pondrá en contacto contigo para personalizar cada detalle de tu itinerario, asegurando una experiencia privada y única, adaptada a tus expectativas.",
+    "desc-2": "completa el tormulario con la mayor cantidad de intormacion posible y permitenos disenar un viale excepcional, donde cada momento refleje exclusividad, confort y excelencia."
   }
 }

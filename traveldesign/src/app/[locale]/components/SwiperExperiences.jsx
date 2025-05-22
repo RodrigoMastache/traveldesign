@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import styles from "@/app/(pages)/nosotros/nosotros.module.css";
+import styles from "@/app/[locale]/(pages)/nosotros/nosotros.module.css";
 
 const experiences = [
   {

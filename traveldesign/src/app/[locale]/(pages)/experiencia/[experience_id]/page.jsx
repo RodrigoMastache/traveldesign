@@ -182,9 +182,10 @@ export default function KeniaPage() {
         {Boolean(moreExperiences?.length) && (
           <Carousel
             swiper="swiper-cards-slider"
-            title={`Más experiencias de ${data?.country}`}
+            title={`${t("experiences.carousel-title")} ${data?.country}`}
             data={moreExperiences}
             type="experiences"
+            pathByItem="/experiencia/"
           />
         )}
       </main>

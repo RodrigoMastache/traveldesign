@@ -178,9 +178,10 @@ export default function Index() {
         {Boolean(moreDestinations?.length) && (
           <Carousel
             swiper="swiper-cards-slider"
-            title={`Más destinos de ${data?.continent}`}
+            title={`${t("destinations.carousel-title")} ${data?.continent}`}
             data={moreDestinations}
             type="destinations"
+            pathByItem="/destinations/"
           />
         )}
       </main>
