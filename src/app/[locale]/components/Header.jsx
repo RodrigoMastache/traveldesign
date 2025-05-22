@@ -170,12 +170,12 @@ export default function Header() {
               {t("blog")}
             </Link>
             <div className="form-language">
-              <Link
+              <a
                 href={locale === "es" ? "/en" : "/es"}
                 className="language-switch"
               >
                 {locale === "es" ? "English" : "Español"}
-              </Link>
+              </a>
               <form className="d-flex align-items-center ms-3 d-none d-lg-block">
                 <span className="me-2">{t("search")}</span>
                 <span className="me-1">
