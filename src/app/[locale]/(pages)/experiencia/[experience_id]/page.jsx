@@ -42,8 +42,6 @@ export default function KeniaPage() {
     }
   }, []);
 
-  console.log("moreExperiences", moreExperiences);
-
   return (
     <>
       <Head>
