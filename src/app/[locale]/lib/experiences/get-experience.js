@@ -53,8 +53,6 @@ export async function getExperiencesByCountry(country, experienceName, locale) {
   const data = res.data;
   const experiences = data.filter((item) => item.name !== experienceName);
 
-  console.log("experiences", experiences);
-
   if (!experiences) return null;
 
   experiences?.map((experience) => {
