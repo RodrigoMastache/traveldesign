@@ -14,7 +14,26 @@
       "title": "Top 10 Destinos"
     },
     "experiences-section": {
-      "title": "Experiencias inolvidables"
+      "title": "Experiencias inolvidables",
+      "carousel": {
+        "cta": "Conocer más",
+        "safari": {
+          "title": "Safaris",
+          "description": "¿Por qué son tan especiales?"
+        },
+        "glaciers": {
+          "title": "Glaciares Majestuosos",
+          "description": "Explora los impresionantes paisajes glaciares"
+        },
+        "arctic": {
+          "title": "Ártico Salvaje",
+          "description": "Observa osos polares en su hábitat natural"
+        },
+        "deserts": {
+          "title": "Desiertos Infinitos",
+          "description": "Aventúrate en las dunas doradas del Sahara"
+        }
+      }
     }
   },
   "header": {

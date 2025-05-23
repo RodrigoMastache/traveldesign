@@ -11,31 +11,33 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-const experiences = [
-  {
-    image: "/assets/img/SliderHome.png",
-    title: "Safaris",
-    description: "¿Por qué son tan especiales?",
-  },
-  {
-    image: "/assets/img/SliderHome2.png",
-    title: "Glaciares Majestuosos",
-    description: "Explora los impresionantes paisajes glaciares",
-  },
-  {
-    image: "/assets/img/SliderHome3.png",
-    title: "Ártico Salvaje",
-    description: "Observa osos polares en su hábitat natural",
-  },
-  {
-    image: "/assets/img/SliderHome4.png",
-    title: "Desiertos Infinitos",
-    description: "Aventúrate en las dunas doradas del Sahara",
-  },
-];
-
 export default function ExperienceSlider() {
   const t = useTranslations("home");
+
+  const experiences = [
+    {
+      image: "/assets/img/SliderHome.png",
+      title: t("experiences-section.carousel.safari.title"),
+      description: t("experiences-section.carousel.safari.description"),
+      documentId: "i7xs7pv8vob7jnaz96zqsm1y",
+    },
+    {
+      image: "/assets/img/SliderHome2.png",
+      title: t("experiences-section.carousel.glaciers.title"),
+      description: t("experiences-section.carousel.glaciers.description"),
+    },
+    {
+      image: "/assets/img/SliderHome3.png",
+      title: t("experiences-section.carousel.arctic.title"),
+      description: t("experiences-section.carousel.arctic.description"),
+    },
+    {
+      image: "/assets/img/SliderHome4.png",
+      title: t("experiences-section.carousel.deserts.title"),
+      description: t("experiences-section.carousel.deserts.description"),
+    },
+  ];
+
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
@@ -71,8 +73,8 @@ export default function ExperienceSlider() {
                       <div className="slide-card">
                         <h2 className="text-uppercase">{exp.title}</h2>
                         <p>{exp.description}</p>
-                        <Link href="#">
-                          Conocer más
+                        <Link href={`/experiencias/${exp?.documentId}`}>
+                          {t("experiences-section.carousel.cta")}
                           <svg
                             width="24"
                             height="24"

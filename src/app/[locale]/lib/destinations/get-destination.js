@@ -1,5 +1,4 @@
 import { query } from "../strapi";
-import { useLocale } from "next-intl";
 
 const IMAGE_KEYS = [
   { key: "banner", urlProp: "bannerUrl" },
@@ -60,6 +59,32 @@ export async function getDestinationByContinent(continent, country, locale) {
   if (!destinations) return null;
 
   destinations?.map((destination) => {
+    if (destination.banner) {
+      destination.cover = `${process.env.NEXT_PUBLIC_STRAPI_HOST}${destination.banner.url}`;
+    } else {
+      destination.cover =
+        "https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg";
+    }
+  });
+
+  return destinations;
+}
+
+export async function getTopDestinations(locale) {
+  const currentLocale = locale === "es" ? "es-MX" : "en";
+  if (!currentLocale) {
+    return;
+  }
+
+  const res = await query(
+    `top-destinations?&locale=${currentLocale}&populate=destinations&populate[0]=destinations&populate[1]=destinations.banner`
+  );
+
+  const destinations = res.data[0];
+
+  if (!destinations) return null;
+
+  destinations?.destinations?.map((destination) => {
     if (destination.banner) {
       destination.cover = `${process.env.NEXT_PUBLIC_STRAPI_HOST}${destination.banner.url}`;
     } else {

@@ -100,7 +100,12 @@ export default function Index() {
                       <p className="text-muted small mb-2">
                         {experience?.country}
                       </p>
-                      <h3 className="card-title h4">{experience?.name}</h3>
+                      <h3
+                        className="card-title h4"
+                        style={{ textTransform: "capitalize" }}
+                      >
+                        {experience?.name}
+                      </h3>
                       {Object.keys(experience).length && (
                         <BlocksRenderer content={experience.description} />
                       )}
