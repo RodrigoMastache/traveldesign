@@ -14,7 +14,26 @@
       "title": "Top 10 Destinations"
     },
     "experiences-section": {
-      "title": "Unforgettable experiences"
+      "title": "Unforgettable experiences",
+      "carousel": {
+        "cta": "learn more",
+        "safari": {
+          "title": "Safaris",
+          "description": "Why are they so special?"
+        },
+        "glaciers": {
+          "title": "Majestic Glaciers",
+          "description": "Explore the breathtaking glacial landscapes"
+        },
+        "arctic": {
+          "title": "Wild Arctic",
+          "description": "Observing polar bears in their natural habitat"
+        },
+        "deserts": {
+          "title": "Infinite Deserts",
+          "description": "Venture into the golden dunes of the Sahara"
+        }
+      }
     }
   },
   "header": {

@@ -1,12 +1,27 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
 import SwiperHero from "@/app/[locale]/components/SwiperHero";
-import SwiperTop10 from "@/app/[locale]/components/SwiperTop10";
+import Carousel from "@/app/[locale]/components/Swiper";
 import ExperienceSlider from "@/app/[locale]/components/ExperienceSlider";
 import Image from "next/image";
-import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import { getTopDestinations } from "./lib/destinations/get-destination";
 
 export default function Home() {
   const t = useTranslations("home");
+  const locale = useLocale();
+
+  const [destinations, setDestinations] = useState([]);
+
+  useEffect(() => {
+    async function getData() {
+      const datos = await getTopDestinations(locale);
+      setDestinations(datos?.destinations);
+    }
+    getData();
+  }, []);
 
   return (
     <div>
@@ -37,7 +52,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <SwiperTop10 />
+      <Carousel
+        swiper="swiper-cards-slider"
+        title={t("top-destinations-section.title")}
+        data={destinations}
+        type="destinations"
+        pathByItem="/destination/"
+      />
       <ExperienceSlider />
     </div>
   );
