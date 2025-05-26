@@ -3,96 +3,98 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { destinationsData, experiencesData } from "../mockups/megaMenu";
 import { getMenuDestinations } from "../lib/destinations/get-menu-destinations";
 import { getMenuExperiences } from "../lib/experiences/get-menu-experiences";
-import { useTranslations, useLocale } from "next-intl";
+import { useLocale } from "next-intl";
 
 export default function MobileMenu() {
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    const currentLang = currentPath.split("/")[1]; // 'en' o 'es'
+
+    const previousLang = localStorage.getItem("lang");
+
+    if (previousLang && previousLang !== currentLang) {
+      localStorage.removeItem("destinations");
+      localStorage.removeItem("experiences");
+    }
+
+    localStorage.setItem("lang", currentLang);
+  }, []);
+
   const router = useRouter();
 
   const locale = useLocale();
   const [openSubmenus, setOpenSubmenus] = useState({});
 
   const [destinations, setDestinations] = useState({});
-
   useEffect(() => {
-    async function getDataAfrica() {
-      const datos = await getMenuDestinations("africa", locale);
-      setDestinations((prev) => ({
-        ...prev,
-        África: datos,
-      }));
+    const stored = localStorage.getItem("destinations");
+
+    if (stored) {
+      setDestinations(JSON.parse(stored));
+      return;
     }
-    async function getDataAmerica() {
-      const datos = await getMenuDestinations("america", locale);
-      setDestinations((prev) => ({
-        ...prev,
-        América: datos,
-      }));
+
+    async function fetchAllDestinations() {
+      const regions = [
+        { key: "africa", name: "África" },
+        { key: "america", name: "América" },
+        { key: "asia", name: "Asia" },
+        { key: "europa", name: "Europa" },
+        { key: "oceania", name: "Oceanía" },
+        { key: "oriente-medio", name: "Oriente Medio" },
+      ];
+
+      const promises = regions.map(({ key }) =>
+        getMenuDestinations(key, locale)
+      );
+
+      const results = await Promise.all(promises);
+
+      const allDestinations = results.reduce((acc, data, idx) => {
+        acc[regions[idx].name] = data;
+        return acc;
+      }, {});
+
+      setDestinations(allDestinations);
+      localStorage.setItem("destinations", JSON.stringify(allDestinations));
     }
-    async function getDataAsia() {
-      const datos = await getMenuDestinations("asia", locale);
-      setDestinations((prev) => ({
-        ...prev,
-        Asia: datos,
-      }));
-    }
-    async function getDataEuropa() {
-      const datos = await getMenuDestinations("europa", locale);
-      setDestinations((prev) => ({
-        ...prev,
-        Europa: datos,
-      }));
-    }
-    async function getDataOceania() {
-      const datos = await getMenuDestinations("oceania", locale);
-      setDestinations((prev) => ({
-        ...prev,
-        Oceanía: datos,
-      }));
-    }
-    async function getDataOrienteMedio() {
-      const datos = await getMenuDestinations("oriente-medio", locale);
-      setDestinations((prev) => ({
-        ...prev,
-        "Oriente Medio": datos,
-      }));
-    }
-    getDataAfrica();
-    getDataAmerica();
-    getDataAsia();
-    getDataEuropa();
-    getDataOceania();
-    getDataOrienteMedio();
+
+    fetchAllDestinations();
   }, []);
 
   const [experiences, setExperiences] = useState({});
+
   useEffect(() => {
-    async function getDataLifestyle() {
-      const datos = await getMenuExperiences("lifestyle", locale);
-      setExperiences((prev) => ({
-        ...prev,
-        Lifestyle: datos,
-      }));
+    const stored = localStorage.getItem("experiences");
+
+    if (stored) {
+      setExperiences(JSON.parse(stored));
+      return;
     }
-    async function getDataProfile() {
-      const datos = await getMenuExperiences("perfil", locale);
-      setExperiences((prev) => ({
-        ...prev,
-        Perfil: datos,
-      }));
+
+    async function fetchAllExperiences() {
+      const categories = [
+        { key: "lifestyle", name: "Lifestyle" },
+        { key: "perfil", name: "Perfil" },
+        { key: "temporada", name: "Temporada" },
+      ];
+
+      const results = await Promise.all(
+        categories.map(({ key }) => getMenuExperiences(key, locale))
+      );
+
+      const allExperiences = results.reduce((acc, data, idx) => {
+        acc[categories[idx].name] = data;
+        return acc;
+      }, {});
+
+      setExperiences(allExperiences);
+      localStorage.setItem("experiences", JSON.stringify(allExperiences));
     }
-    async function getDataTemporada() {
-      const datos = await getMenuExperiences("temporada", locale);
-      setExperiences((prev) => ({
-        ...prev,
-        Temporada: datos,
-      }));
-    }
-    getDataLifestyle();
-    getDataProfile();
-    getDataTemporada();
+
+    fetchAllExperiences();
   }, []);
 
   const toggleSubmenu = (menu) => {
