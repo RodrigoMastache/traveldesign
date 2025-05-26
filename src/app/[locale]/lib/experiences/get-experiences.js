@@ -6,18 +6,22 @@ export async function getExperiencesByProfile(documentId, locale) {
     return;
   }
   const res = await query(
-    `experience-categories?filters[documentId][$eq]=${documentId}&locale=${currentLocale}&populate=experiences&populate[0]=experiences&populate[1]=experiences.banner`
+    `experience-categories?filters[documentId][$eq]=${documentId}&locale=${currentLocale}&populate=banner&populate=experiences&populate[0]=experiences&populate[1]=experiences.banner`
   );
 
-  const destination = res.data[0];
+  const expereinces = res.data[0];
 
-  if (!destination) return null;
+  if (!expereinces) return null;
 
-  destination.experiences.map((experience) => {
+  expereinces.banner = expereinces?.banner
+    ? `${process.env.NEXT_PUBLIC_STRAPI_HOST}${expereinces.banner.url}`
+    : "https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg";
+
+  expereinces?.experiences.map((experience) => {
     experience.cover = experience.banner
       ? `${process.env.NEXT_PUBLIC_STRAPI_HOST}${experience.banner.url}`
-      : "";
+      : "https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg";
   });
 
-  return destination;
+  return expereinces;
 }

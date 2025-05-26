@@ -28,6 +28,8 @@ export default function Index() {
     }
   }, []);
 
+  console.log("data", data);
+
   return (
     <>
       <Head>
@@ -45,13 +47,7 @@ export default function Index() {
             className="position-relative"
             style={{ height: "100vh", width: "100%" }}
           >
-            <Image
-              src="/assets/img/SafariHeader.png"
-              alt={data?.name || "imagen"}
-              layout="fill"
-              objectFit="cover"
-              priority
-            />
+            <img src={data.banner} alt={data?.name || "imagen"} />
             <div className="overlay d-flex align-items-center justify-content-center">
               <h1 className="text-center text-white">{data?.name}</h1>
             </div>
