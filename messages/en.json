@@ -91,18 +91,102 @@
     "sec-3": "We know that a trip is much more than a destination. It is the illusion that begins from the moment it is imagined, the excitement of the preparations, and the tranquility of knowing that everything is under control. That's why we focus on creating worry-free trips, where each itinerary is tailor-made, taking care of every detail with precision and anticipating every need.",
     "sec-4": "At Travel Design we live and breathe luxury, but not as a synonym of ostentation, but as a way of traveling with purpose, with comfort, with authenticity. We understand luxury as the art of traveling well: without improvisations, with personalized attention and experiences that cannot be found in a common catalog.",
     "sec-5": "What sets us apart is the spirit in which we work. We don't sell trips; we design experiences. And behind every trip, there are hours of dedication, years of knowledge, and a deep commitment to our travelers. Because every itinerary that leaves our hands, carries a little piece of our history, our passion and why we started this journey.",
-    "sec-6": "If you've ever dreamed of a trip that feels as much your own as your story, you're in the right place. Here, every experience is designed with you and for you.",
-    "faqs": {
-      "q1": {
-        "question": "Why hire a travel agency?",
-        "answer": ""
-      }
-    }
+    "sec-6": "If you've ever dreamed of a trip that feels as much your own as your story, you're in the right place. Here, every experience is designed with you and for you."
   },
   "contact": {
     "title": "Contact us",
     "subtitle": "Start planning your trip",
     "desc-1": "At Travel Design, we create exclusive, tailor-made travel experiences designed to meet the highest standards. Our team of luxury travel experts will contact you to customize every detail of your itinerary, ensuring a private and unique experience tailored to your expectations.",
-    "desc-2": "complete the itinerary with as much information as possible and allow us to design an exceptional journey, where every moment reflects exclusivity, comfort and excellence."
+    "desc-2": "complete the itinerary with as much information as possible and allow us to design an exceptional journey, where every moment reflects exclusivity, comfort and excellence.",
+    "cta": "SEND",
+    "loading": "SENDING...",
+    "q1": {
+      "question": "Which destination(s) do you want to discover on your next trip?",
+      "placeholder": "Please select one or more",
+      "cta": "Clear selections"
+    },
+    "q2": {
+      "question": "What type of trip would you like to make?",
+      "placeholder": "You can select several options."
+    },
+    "q3": {
+      "question": "Do you have any definite dates to make the trip?",
+      "answer1": "Yes I have the exact dates",
+      "answer1Opt1": "Departure date",
+      "answer1Opt2": "Return date",
+      "answer2": "Not yet defined"
+    },
+    "q4": {
+      "question": "Who are you traveling with?",
+      "placeholderAnswer1": "Adults",
+      "placeholderAnswer2": "Children"
+    },
+    "q5": {
+      "question": "What is the planned budget to invest in your trip (DLLS)?",
+      "placeholder": "Please select a range",
+      "priceRanges": {
+        "range1": "$1,200 - $2,900 USD",
+        "range2": "$2,900 - $5,900 USD",
+        "range3": "$5,900 - $11,800 USD",
+        "range4": "$11,800 - $20,600 USD",
+        "range5": "$20,600 - $29,400 USD",
+        "range6": "$29,400 - $47,100 USD",
+        "range7": "+$47,100 USD"
+      }
+    },
+    "q6": {
+      "question": "Describe to us the experience you would like to live",
+      "placeholder": "Include information such as ages of your companions and activities you would like to do"
+    },
+    "q7": {
+      "question": "Where can our travel expert contact you?",
+      "placeholderAnswer1": "Full name *",
+      "placeholderAnswer2": "E-mail *",
+      "placeholderAnswer3": "Phone *",
+      "placeholderAnswer4": "Country (optional)",
+      "placeholderAnswer5": "City (optional)",
+      "check1": "I wish to receive the latest travel updates and understand that I can unsubscribe at any time.",
+      "check2-1": "I have read and agree to the",
+      "check2-2": "Privacy and Data Protection Policy *"
+    }
+  },
+  "privacyPolicy": {
+    "headerAlt": "privacy policy",
+    "headerTitle": "Privacy Policy",
+    "title": "Privacy and Data Protection Policy",
+    "lastUpdateLabel": "Last updated:",
+    "lastUpdateDate": "March 31, 2025",
+    "intro": "At Travel Design (hereinafter, “we” or “the company”), we protect the privacy and personal data of our users in accordance with the Federal Law on Protection of Personal Data Held by Private Parties (LFPDPPP) and its Regulations. This policy describes how we collect, use, and protect your information when you interact with our website www.traveldesign.com.mx.",
+    "section1Title": "1. Data Controller Identity and Address",
+    "section1Content": "The data controller is Travel Design, located at Av. 50 metros 100 Torre III Piso 6 Oficina 602 Villas del Lago, Cuernavaca, Morelos, C.P. 62374. For any questions or requests related to privacy, contact us at info@traveldesign.com.mx.",
+    "section2Title": "2. Personal Data Collected",
+    "section2Intro": "We collect the following personal data when you interact with our website or services:",
+    "section2Item1": "Identification data: Name, email, phone number.",
+    "section2Item2": "Browsing data: IP address, browser, operating system, and visited pages.",
+    "section2Item3": "Cookies and tracking technologies: To enhance user experience and personalize content.",
+    "section3Title": "3. Purpose of Data Processing",
+    "section3Intro": "Personal data will be used to:",
+    "section3Item1": "Manage your registration and provide access to our services.",
+    "section3Item2": "Send information about news, promotions, and services (only if you have given your consent).",
+    "section3Item3": "Personalize your experience on our website.",
+    "section3Item4": "Comply with applicable legal and regulatory obligations.",
+    "section4Title": "4. ARCO Rights (Access, Rectification, Cancellation, and Opposition)",
+    "section4Intro": "As the data subject, you may exercise your ARCO rights at any time by sending a request to info@traveldesign.com.mx with the following information:",
+    "section4Item1": "Full name and identification document.",
+    "section4Item2": "Clear description of the right you wish to exercise.",
+    "section4Item3": "Email address or means to receive a response.",
+    "section4Note": "We will respond to your request within a maximum of 20 business days in accordance with the LFPDPPP.",
+    "section5Title": "5. Transfer of Personal Data",
+    "section5Intro": "We do not share or sell your personal information to third parties without your consent, except in the following cases:",
+    "section5Item1": "Service providers that help us operate our website and conduct business activities.",
+    "section5Item2": "Government authorities when required by law.",
+    "section6Title": "6. Use of Cookies and Tracking Technologies",
+    "section6Intro": "We use cookies to improve the user experience and analyze site usage. You can disable cookies through your browser settings.",
+    "section7Title": "7. Data Security and Protection",
+    "section7Intro": "We implement administrative, technical, and physical security measures to protect your information from unauthorized access, loss, or alteration.",
+    "section8Title": "8. Changes to this Policy",
+    "section8Intro": "We reserve the right to modify this policy at any time. Any changes will be notified on our website www.traveldesign.com.mx.",
+    "section9Title": "9. Contact",
+    "section9Intro": "For questions about this Privacy Policy, contact us at info@traveldesign.com.mx or at our address: Av. 50 metros 100 Torre III Piso 6 Oficina 602 Villas del Lago, Cuernavaca, Morelos, C.P. 62374."
   }
 }

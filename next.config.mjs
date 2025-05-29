@@ -3,8 +3,18 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig = {
   images: {
-    remotePatterns: [new URL("https://placehold.co/**")],
-    domains: ["https://placehold.co/**"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "placehold.co",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "loved-authority-f2b40ce58f.media.strapiapp.com",
+        pathname: "/**",
+      },
+    ],
   },
 };
 
