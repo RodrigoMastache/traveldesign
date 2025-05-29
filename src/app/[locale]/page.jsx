@@ -57,7 +57,7 @@ export default function Home() {
         title={t("top-destinations-section.title")}
         data={destinations}
         type="destinations"
-        pathByItem="/destination/"
+        pathByItem="/destinations/"
       />
       <ExperienceSlider />
     </div>

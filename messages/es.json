@@ -91,18 +91,102 @@
     "sec-3": "Sabemos que un viaje es mucho más que un destino. Es la ilusión que comienza desde el momento en que se imagina, la emoción de los preparativos, y la tranquilidad de saber que todo está bajo control. Por eso, nos enfocamos en crear viajes sin preocupaciones, donde cada itinerario esté diseñado a la medida, cuidando los detalles con precisión y anticipando cualquier necesidad.",
     "sec-4": "En Travel Design vivimos y respiramos lujo, pero no como sinónimo de ostentación, sino como una forma de viajar con propósito, con comodidad, con autenticidad. Entendemos el lujo como el arte de viajar bien: sin improvisaciones, con atención personalizada y experiencias que no se encuentran en un catálogo común.",
     "sec-5": "Lo que nos diferencia es el espíritu con el que trabajamos. No vendemos viajes; diseñamos experiencias. Y detrás de cada viaje, hay horas de dedicación, años de conocimiento, y un profundo compromiso con nuestros viajeros. Porque cada itinerario que sale de nuestras manos, lleva un pedacito de nuestra historia, de nuestra pasión y del por qué empezamos este camino.",
-    "sec-6": "Si alguna vez soñaste con un viaje que se sintiera tan tuyo como tu historia, estás en el lugar correcto. Aquí, cada experiencia se diseña contigo y para ti.",
-    "faqs": {
-      "q1": {
-        "question": "¿Por qué contratar una agencia de viajes?",
-        "answer": ""
-      }
-    }
+    "sec-6": "Si alguna vez soñaste con un viaje que se sintiera tan tuyo como tu historia, estás en el lugar correcto. Aquí, cada experiencia se diseña contigo y para ti."
   },
   "contact": {
     "title": "Contáctanos",
     "subtitle": "Comienza a planear tu viaje",
     "desc-1": "En Travel Design, creamos experiencias de viaje exclusivas y a la medida, diseñadas para cumplir las más altas exigencias. Nuestro equipo de expertos en viajes de lujo se pondrá en contacto contigo para personalizar cada detalle de tu itinerario, asegurando una experiencia privada y única, adaptada a tus expectativas.",
-    "desc-2": "completa el tormulario con la mayor cantidad de intormacion posible y permitenos disenar un viale excepcional, donde cada momento refleje exclusividad, confort y excelencia."
+    "desc-2": "completa el tormulario con la mayor cantidad de intormacion posible y permitenos disenar un viale excepcional, donde cada momento refleje exclusividad, confort y excelencia.",
+    "cta": "ENVIAR",
+    "loading": "ENVIANDO...",
+    "q1": {
+      "question": "¿Cuál(es) es el destino(s) que quieres descubrir en tu próximo viaje?",
+      "placeholder": "Selecciona uno o más por favor",
+      "cta": "Borrar selecciones"
+    },
+    "q2": {
+      "question": "¿Qué tipo de viaje te gustaría realizar?",
+      "placeholder": "Puedes seleccionar varias opciones."
+    },
+    "q3": {
+      "question": "¿Tienes alguna fecha definida para hacer el viaje?",
+      "answer1": "Sí tengo las fechas exactas",
+      "answer1Opt1": "Fecha de salida",
+      "answer1Opt2": "Fecha de regreso",
+      "answer2": "Aún no lo defino"
+    },
+    "q4": {
+      "question": "¿Con quién(es) viajas?",
+      "placeholderAnswer1": "Adultos",
+      "placeholderAnswer2": "Niños"
+    },
+    "q5": {
+      "question": "¿Cuál es el presupuesto planeado para invertir en tu viaje? (MXN)",
+      "placeholder": "Selecciona un rango por favor",
+      "priceRanges": {
+        "range1": "$20,000 - $50,000 MXN",
+        "range2": "$50,000 - $100,000 MXN",
+        "range3": "$100,000 - $200,000 MXN",
+        "range4": "$200,000 - $350,000 MXN",
+        "range5": "$350,000 - $500,000 MXN",
+        "range6": "$500,000 - $800,000 MXN",
+        "range7": "+$800,000 MXN"
+      }
+    },
+    "q6": {
+      "question": "Descríbenos la experiencia que deseas vivir",
+      "placeholder": "Incluye información como edades de tus acompañantes y actividades que te gustaría realizar"
+    },
+    "q7": {
+      "question": "¿Dónde puede contactarte nuestro experto en viajes?",
+      "placeholderAnswer1": "Nombre completo *",
+      "placeholderAnswer2": "E-mail *",
+      "placeholderAnswer3": "Teléfono *",
+      "placeholderAnswer4": "Pais (opcional)",
+      "placeholderAnswer5": "Ciudad (opcional)",
+      "check1": "Deseo recibir las últimas actualizaciones sobre viajes y entiendo que puedo cancelar mi suscripción en cualquier momento.",
+      "check2-1": "He leído y acepto la",
+      "check2-2": "Política de Privacidad y protección de datos *"
+    }
+  },
+  "privacyPolicy": {
+    "headerAlt": "política de privacidad",
+    "headerTitle": "Política de privacidad",
+    "title": "Política de Privacidad y Protección de Datos",
+    "lastUpdateLabel": "Última actualización:",
+    "lastUpdateDate": "31 marzo 2025",
+    "intro": "En Travel Design (en adelante, “nosotros” o “la empresa”), protegemos la privacidad y los datos personales de nuestros usuarios conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y su Reglamento. Esta política describe cómo recopilamos, usamos y protegemos tu información cuando interactúas con nuestro sitio web www.traveldesign.com.mx",
+    "section1Title": "1. Identidad y Domicilio del Responsable",
+    "section1Content": "El responsable del tratamiento de los datos personales es Travel Design, con domicilio en Av. 50 metros 100 Torre III Piso 6 Oficina 602 Villas del Lago, Cuernavaca, Morelos, C.P. 62374. Para cualquier duda o solicitud relacionada con la privacidad, puedes contactarnos en info@traveldesign.com.mx.",
+    "section2Title": "2. Datos Personales Recopilados",
+    "section2Intro": "Recopilamos los siguientes datos personales cuando interactúas con nuestro sitio web o servicios:",
+    "section2Item1": "Datos de identificación: Nombre, correo electrónico, teléfono.",
+    "section2Item2": "Datos de navegación: Dirección IP, navegador, sistema operativo y páginas visitadas.",
+    "section2Item3": "Cookies y tecnologías de rastreo: Para mejorar la experiencia de usuario y personalizar contenido.",
+    "section3Title": "3. Finalidad del Tratamiento de Datos",
+    "section3Intro": "Los datos personales serán utilizados para:",
+    "section3Item1": "Gestionar tu registro y brindarte acceso a nuestros servicios.",
+    "section3Item2": "Enviar información sobre novedades, promociones y servicios (solo si has dado tu consentimiento).",
+    "section3Item3": "Personalizar la experiencia en nuestro sitio web.",
+    "section3Item4": "Cumplir con obligaciones legales y normativas aplicables.",
+    "section4Title": "4. Derechos ARCO (Acceso, Rectificación, Cancelación y Oposición)",
+    "section4Intro": "Como titular de los datos personales, puedes ejercer tus derechos ARCO en cualquier momento, enviando una solicitud a info@traveldesign.com.mx con la siguiente información:",
+    "section4Item1": "Nombre completo y documento de identidad.",
+    "section4Item2": "Descripción clara del derecho que deseas ejercer.",
+    "section4Item3": "Correo electrónico o medio para recibir la respuesta.",
+    "section4Note": "Responderemos tu solicitud en un máximo de 20 días hábiles conforme a la LFPDPPP.",
+    "section5Title": "5. Transferencias de Datos Personales",
+    "section5Intro": "No compartimos ni vendemos tu información personal a terceros sin tu consentimiento, excepto en los siguientes casos:",
+    "section5Item1": "Proveedores de servicios que nos ayudan a operar nuestro sitio web y realizar actividades comerciales.",
+    "section5Item2": "Autoridades gubernamentales cuando sea requerido por ley.",
+    "section6Title": "6. Uso de Cookies y Tecnologías de Rastreo",
+    "section6Intro": "Utilizamos cookies para mejorar la experiencia de usuario y analizar el uso del sitio. Puedes desactivar las cookies desde la configuración de tu navegador.",
+    "section7Title": "7. Seguridad y Protección de Datos",
+    "section7Intro": "Implementamos medidas de seguridad administrativas, técnicas y físicas para proteger tu información contra accesos no autorizados, pérdidas o alteraciones.",
+    "section8Title": "8. Modificaciones a esta Política",
+    "section8Intro": "Nos reservamos el derecho de modificar esta política en cualquier momento. Cualquier cambio será notificado en nuestro sitio web www.traveldesign.com.mx.",
+    "section9Title": "9. Contacto",
+    "section9Intro": "Para dudas sobre esta Política de Privacidad, contáctanos en info@traveldesign.com.mx o en nuestra dirección Av. 50 metros 100 Torre III Piso 6 Oficina 602 Villas del Lago, Cuernavaca, Morelos, C.P. 62374."
   }
 }

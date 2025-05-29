@@ -7,6 +7,7 @@ import { Poppins } from "next/font/google";
 import Header from "@/app/[locale]/components/Header";
 import Footer from "@/app/[locale]/components/Footer";
 import BootstrapProvider from "@/app/[locale]/providers/bootstrap-provider";
+import { LocalStorageCleaner } from "@/app/[locale]/components/LocalStorageCleaner";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -30,6 +31,7 @@ export default async function RootLayout({ children, params }) {
     <html lang={locale}>
       <body className={`${poppins.variable} antialiased`}>
         <BootstrapProvider />
+        <LocalStorageCleaner />
         <NextIntlClientProvider>
           <Header />
           <main>{children}</main>
