@@ -12,7 +12,7 @@ import Carousel from "@/app/[locale]/components/Swiper";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 
-export default function KeniaPage() {
+export default function Index() {
   const locale = useLocale();
   const t = useTranslations("titles");
   const c = useTranslations("ctas");
