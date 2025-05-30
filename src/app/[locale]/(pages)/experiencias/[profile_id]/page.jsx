@@ -28,8 +28,6 @@ export default function Index() {
     }
   }, []);
 
-  console.log("data", data);
-
   return (
     <>
       <Head>
