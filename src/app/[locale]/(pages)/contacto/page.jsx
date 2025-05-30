@@ -155,7 +155,6 @@ export default function Contacto() {
       try {
         delete formData.actualizaciones;
         delete formData.privacidad;
-        console.log("Datos del formulario:", formData);
 
         emailjs
           .sendForm(

@@ -46,7 +46,6 @@ const Index = ({ swiper, title, data, type, pathByItem = "/" }) => {
                         {type === "destinations" ? item?.country : item?.name}
                       </span>
                     </Link>
-                    <small style={{ fontSize: "10px" }}>{item?.cover}</small>
                   </div>
                 ))}
               </div>

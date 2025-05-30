@@ -27,16 +27,12 @@ export async function getExperience(documentId, locale) {
     if (imageArray) {
       experience[
         urlProp
-      ] = `${process.env.NEXT_PUBLIC_STRAPI_HOST}${imageArray.url}`;
+      ] = `${process.env.NEXT_PUBLIC_STRAPI_HOST_IMAGE}${imageArray.url}`;
     } else {
       experience[urlProp] =
         "https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg";
     }
   });
-
-  //   destination.experiences.map((experience) => {
-  //     experience.cover = `${process.env.NEXT_PUBLIC_STRAPI_HOST}${experience.details.banner.url}`;
-  //   });
 
   return experience;
 }
@@ -57,7 +53,7 @@ export async function getExperiencesByCountry(country, experienceName, locale) {
 
   experiences?.map((experience) => {
     if (experience.banner) {
-      experience.cover = `${process.env.NEXT_PUBLIC_STRAPI_HOST}${experience.banner.url}`;
+      experience.cover = `${process.env.NEXT_PUBLIC_STRAPI_HOST_IMAGE}${experience.banner.url}`;
     } else {
       experience.cover =
         "https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg";

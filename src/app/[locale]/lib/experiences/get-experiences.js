@@ -14,12 +14,12 @@ export async function getExperiencesByProfile(documentId, locale) {
   if (!expereinces) return null;
 
   expereinces.banner = expereinces?.banner
-    ? `${process.env.NEXT_PUBLIC_STRAPI_HOST}${expereinces.banner.url}`
+    ? `${process.env.NEXT_PUBLIC_STRAPI_HOST_IMAGE}${expereinces.banner.url}`
     : "https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg";
 
   expereinces?.experiences.map((experience) => {
     experience.cover = experience.banner
-      ? `${process.env.NEXT_PUBLIC_STRAPI_HOST}${experience.banner.url}`
+      ? `${process.env.NEXT_PUBLIC_STRAPI_HOST_IMAGE}${experience.banner.url}`
       : "https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg";
   });
 
