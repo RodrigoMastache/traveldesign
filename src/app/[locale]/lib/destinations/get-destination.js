@@ -86,7 +86,7 @@ export async function getTopDestinations(locale) {
 
   destinations?.destinations?.map((destination) => {
     if (destination.banner) {
-      destination.cover = `${process.env.NEXT_PUBLIC_STRAPI_HOST}${destination.banner.url}`;
+      destination.cover = `${process.env.NEXT_PUBLIC_STRAPI_HOST_IMAGE}${destination.banner.url}`;
     } else {
       destination.cover =
         "https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg";

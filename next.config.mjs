@@ -7,14 +7,22 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "placehold.co",
-        pathname: "/**",
+        pathname: "**",
       },
       {
         protocol: "https",
         hostname: "loved-authority-f2b40ce58f.media.strapiapp.com",
-        pathname: "/**",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "loved-authority-f2b40ce58f.strapiapp.com",
+        pathname: "**",
       },
     ],
+    dangerouslyAllowSVG: true,
+    contentDispositionType: "attachment",
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 };
 
