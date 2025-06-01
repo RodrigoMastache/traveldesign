@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Thumbs } from "swiper/modules";
 import "swiper/css";
@@ -9,34 +9,22 @@ import "swiper/css/pagination";
 import "swiper/css/thumbs";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { getUnforgettableExperiences } from "../lib/experiences/get-unforgettable-experiences";
 
 export default function ExperienceSlider() {
   const t = useTranslations("home");
+  const locale = useLocale();
 
-  const experiences = [
-    {
-      image: "/assets/img/SliderHome.png",
-      title: t("experiences-section.carousel.safari.title"),
-      description: t("experiences-section.carousel.safari.description"),
-      documentId: "i7xs7pv8vob7jnaz96zqsm1y",
-    },
-    {
-      image: "/assets/img/SliderHome2.png",
-      title: t("experiences-section.carousel.glaciers.title"),
-      description: t("experiences-section.carousel.glaciers.description"),
-    },
-    {
-      image: "/assets/img/SliderHome3.png",
-      title: t("experiences-section.carousel.arctic.title"),
-      description: t("experiences-section.carousel.arctic.description"),
-    },
-    {
-      image: "/assets/img/SliderHome4.png",
-      title: t("experiences-section.carousel.deserts.title"),
-      description: t("experiences-section.carousel.deserts.description"),
-    },
-  ];
+  const [experiences, setExperiences] = useState([]);
+
+  useEffect(() => {
+    async function getData() {
+      const datos = await getUnforgettableExperiences(locale);
+      setExperiences(datos?.experiences);
+    }
+    getData();
+  }, []);
 
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
@@ -63,7 +51,7 @@ export default function ExperienceSlider() {
                   {experiences.map((exp, index) => (
                     <SwiperSlide key={index} className="main-slide">
                       <div className="slide-image-container">
-                        <Image
+                        <img
                           src={exp.image}
                           width={1200}
                           height={800}
@@ -73,7 +61,7 @@ export default function ExperienceSlider() {
                       <div className="slide-card">
                         <h2 className="text-uppercase">{exp.title}</h2>
                         <p>{exp.description}</p>
-                        <Link href={`/experiencias/${exp?.documentId}`}>
+                        <Link href={`/experiencia/${exp?.documentId}`}>
                           {t("experiences-section.carousel.cta")}
                           <svg
                             width="24"
@@ -115,7 +103,7 @@ export default function ExperienceSlider() {
                 >
                   {experiences.map((exp, index) => (
                     <SwiperSlide key={index} className="thumb-slide">
-                      <Image
+                      <img
                         src={exp.image}
                         width={300}
                         height={200}

@@ -73,7 +73,7 @@ export async function getTopDestinations(locale) {
   }
 
   const res = await query(
-    `top-destinations?&locale=${currentLocale}&populate=destinations&populate[0]=destinations&populate[1]=destinations.banner`
+    `top-destinations?locale=${currentLocale}&populate=destinations&populate[0]=destinations&populate[1]=destinations.banner`
   );
 
   const destinations = res.data[0];

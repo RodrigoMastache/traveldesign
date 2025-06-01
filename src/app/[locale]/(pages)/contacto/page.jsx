@@ -33,6 +33,11 @@ export default function Contacto() {
   const [formErrors, setFormErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  function capitalizeFirstLetter(str) {
+    if (!str) return "";
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+
   // Manejar cambios en los inputs
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -281,10 +286,11 @@ export default function Contacto() {
                           {destinations &&
                             destinations?.map((item) => (
                               <option
+                                style={{ textTransform: "capitalize" }}
                                 key={item?.documentId}
                                 value={item.country}
                               >
-                                {item.country}
+                                {capitalizeFirstLetter(item.country)}
                               </option>
                             ))}
                         </select>
@@ -295,15 +301,19 @@ export default function Contacto() {
                     </div>
                     <div className="tags-container mt-2" id="tagsContainer">
                       {formData.destinos.map((destino, index) => (
-                        <span key={index} className="tag me-2 mb-2">
+                        <span
+                          key={index}
+                          className="tag me-2 mb-2"
+                          style={{ textTransform: "capitalize" }}
+                        >
                           {destino}
-                          <button
-                            type="button"
-                            className="ms-2 btn-close"
-                            style={{ fontSize: "10px" }}
+                          <span
+                            className="remove-tag"
                             aria-label="Eliminar"
                             onClick={() => removeDestino(destino)}
-                          ></button>
+                          >
+                            ✕
+                          </span>
                         </span>
                       ))}
                     </div>
