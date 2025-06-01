@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import Carousel from "@/app/[locale]/components/Swiper";
 import { useTranslations, useLocale } from "next-intl";
@@ -45,9 +46,9 @@ export default function NosotrosPage() {
                   <p className="text-justify">
                     <b>Travel Design</b> {t("sec-1")}
                   </p>
-                  <a href="#" className="btn-negro">
+                  <Link href="/contacto" className="btn-negro">
                     {c("articles.start")}
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -230,8 +231,8 @@ export default function NosotrosPage() {
                         Cada perfil tiene necesidades diferentes, y nuestra
                         labor es asegurarnos de que cada experiencia esté
                         pensada para cumplirlas con excelencia. Contáctanos{" "}
-                        <a href="mailto:contacto@td.com.mx">aquí</a> y empecemos
-                        a diseñarlo juntos.
+                        <a href="/contacto">aquí</a> y empecemos a diseñarlo
+                        juntos.
                       </div>
                     </div>
                   </div>
@@ -270,7 +271,7 @@ export default function NosotrosPage() {
                         <br />
                         No importa cuál sea tu estilo de viaje, lo diseñamos de
                         manera personalizada para ti. Escríbenos{" "}
-                        <a href="mailto:contacto@td.com.mx">aquí</a>.
+                        <a href="/contacto">aquí</a>.
                       </div>
                     </div>
                   </div>
@@ -342,7 +343,7 @@ export default function NosotrosPage() {
                         te ocupes de disfrutar cada momento. <br />
                         <br />
                         ¿Quieres una propuesta personalizada? Escríbenos{" "}
-                        <a href="mailto:contacto@td.com.mx">aquí</a>.
+                        <a href="/contacto">aquí</a>.
                       </div>
                     </div>
                   </div>
@@ -375,8 +376,8 @@ export default function NosotrosPage() {
                         realidad. <br />
                         <br />
                         ¿Listo para empezar a planearlo? Contáctanos{" "}
-                        <a href="mailto:contacto@td.com.mx">aquí</a> y recibe
-                        una propuesta de nuestro equipo.
+                        <a href="/contacto">aquí</a> y recibe una propuesta de
+                        nuestro equipo.
                       </div>
                     </div>
                   </div>
@@ -409,8 +410,8 @@ export default function NosotrosPage() {
                         creamos experiencias únicas, hechas a tu medida. <br />
                         <br />
                         ¿Tienes algo en mente? Contáctanos{" "}
-                        <a href="mailto:contacto@td.com.mx">aquí</a> y empecemos
-                        a diseñarlo juntos.
+                        <a href="/contacto">aquí</a> y empecemos a diseñarlo
+                        juntos.
                       </div>
                     </div>
                   </div>

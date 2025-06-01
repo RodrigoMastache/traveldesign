@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import {
@@ -89,9 +90,9 @@ export default function Index() {
                   {Object.keys(data).length && (
                     <BlocksRenderer content={data.introduction} />
                   )}
-                  <a href="#" className="btn btn-dark btn-negro">
+                  <Link href="/contacto" className="btn btn-dark btn-negro">
                     {c("articles.start")}
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -108,9 +109,9 @@ export default function Index() {
                   {Object.keys(data).length && (
                     <BlocksRenderer content={data.activities} />
                   )}
-                  <a href="#" className="action-link">
+                  <Link href="/contacto" className="action-link">
                     {c("articles.start")}
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-md-4">
@@ -143,9 +144,9 @@ export default function Index() {
                   {Object.keys(data).length && (
                     <BlocksRenderer content={data.accommodation} />
                   )}
-                  <a href="#" className="action-link">
+                  <Link href="/contacto" className="action-link">
                     {c("articles.start")}
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -160,9 +161,9 @@ export default function Index() {
                   {Object.keys(data).length && (
                     <BlocksRenderer content={data.recommendations} />
                   )}
-                  <a href="#" className="action-link">
+                  <Link href="/contacto" className="action-link">
                     {c("articles.start")}
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-md-4">

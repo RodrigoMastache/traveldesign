@@ -19,6 +19,14 @@ export default function PartnersSection() {
       id: 40,
       image: "/assets/img/logo-footer-4.png",
     },
+    {
+      id: 50,
+      image: "/assets/img/logo-four-seasons.png",
+    },
+    {
+      id: 60,
+      image: "/assets/img/logo-virtuoso-b.png",
+    },
   ];
 
   return (
