@@ -913,13 +913,28 @@ export default function Contacto() {
                       </div>
                     </div>
                   </div>
-
                   <button type="submit" className="btn-negro">
                     {loading ? t("loading") : t("cta")}
                   </button>
                 </form>
               </div>
             </div>
+            <section className="rrss-float-btn" aria-label="Redes sociales">
+              <a
+                href="https://www.facebook.com/people/Travel-Design-MX/100032495513266/"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <img src="/assets/img/icono-facebook.svg" alt="Facebook" />
+              </a>
+              <a
+                href="https://www.instagram.com/traveldesignmx"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <img src="/assets/img/icono-instagram.svg" alt="Instagram" />
+              </a>
+            </section>
           </div>
         </section>
       </main>
