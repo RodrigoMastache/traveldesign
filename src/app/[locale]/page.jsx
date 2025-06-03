@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import SwiperHero from "@/app/[locale]/components/SwiperHero";
+import SwiperPagination from "@/app/[locale]/components/SwiperPagination";
 import Carousel from "@/app/[locale]/components/Swiper";
 import ExperienceSlider from "@/app/[locale]/components/ExperienceSlider";
 import Image from "next/image";
@@ -52,12 +53,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Carousel
-        swiper="swiper-cards-slider"
-        title={t("top-destinations-section.title")}
+      <SwiperPagination
         data={destinations}
-        type="destinations"
-        pathByItem="/destinations/"
+        // swiper="swiper-cards-slider"
+        // swiperPagination="swiper-pagination-top-10"
+        // title={t("top-destinations-section.title")}
+        // type="destinations"
+        // pathByItem="/destinations/"
       />
       <ExperienceSlider />
     </div>
