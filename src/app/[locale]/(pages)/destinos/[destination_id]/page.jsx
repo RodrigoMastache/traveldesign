@@ -62,7 +62,7 @@ export default function Index() {
             style={{ height: "100vh", width: "100%" }}
           >
             {data?.bannerUrl && (
-              <img src={data?.bannerUrl} alt="Kenia - Masái Mara" />
+              <img src={data?.bannerUrl} alt="imagen-destinos" />
             )}
             <div className="overlay d-flex align-items-center justify-content-center">
               <h1 className="text-center text-white">{data?.country}</h1>

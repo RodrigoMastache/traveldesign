@@ -1,9 +1,8 @@
 "use client";
 
+import Head from "next/head";
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import { getExperiencesByProfile } from "../../../lib/experiences/get-experiences";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
@@ -31,13 +30,15 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>{data?.name} | Travel Design</title>
+        <title>{data?.name ?? "Experiencia"}</title>
         <meta
           name="description"
-          content="Descubre los mejores safaris en África con Travel Design"
+          content={
+            data?.introduction?.[0]?.children?.[0]?.text ??
+            "Explora esta experiencia."
+          }
         />
       </Head>
-
       <main>
         {/* Hero Section */}
         <section className="hero-section position-relative">
@@ -71,8 +72,6 @@ export default function Index() {
             </div>
           </div>
         </section>
-
-        {/* Destinations Section */}
         <section className="section-padding">
           <div className="container">
             <div className="row g-4">
@@ -114,52 +113,6 @@ export default function Index() {
                 </div>
               ))}
             </div>
-
-            {/* Pagination */}
-            {/* <div className="row">
-              <div className="col">
-                <nav
-                  className="section-pagination d-flex justify-content-center mt-5"
-                  aria-label="Navegación de páginas"
-                >
-                  <ul className="pagination">
-                    <li className="page-item active">
-                      <Link
-                        className="page-link rounded-circle"
-                        href="#"
-                        aria-current="page"
-                      >
-                        1
-                      </Link>
-                    </li>
-                    <li className="page-item">
-                      <Link className="page-link" href="#">
-                        2
-                      </Link>
-                    </li>
-                    <li className="page-item">
-                      <Link className="page-link" href="#">
-                        3
-                      </Link>
-                    </li>
-                    <li className="page-item">
-                      <Link className="page-link" href="#">
-                        4
-                      </Link>
-                    </li>
-                    <li className="page-item">
-                      <Link
-                        className="page-link"
-                        href="#"
-                        aria-label="Siguiente"
-                      >
-                        <span aria-hidden="true">&rsaquo;</span>
-                      </Link>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div> */}
           </div>
         </section>
       </main>
