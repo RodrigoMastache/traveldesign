@@ -53,14 +53,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <SwiperPagination
-        data={destinations}
-        // swiper="swiper-cards-slider"
-        // swiperPagination="swiper-pagination-top-10"
-        // title={t("top-destinations-section.title")}
-        // type="destinations"
-        // pathByItem="/destinations/"
-      />
+      <SwiperPagination data={destinations} />
       <ExperienceSlider />
     </div>
   );

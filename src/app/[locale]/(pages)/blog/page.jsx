@@ -27,22 +27,14 @@ export default function Index() {
     <>
       <Head>
         <title>Blog | Travel Design</title>
-        <meta
-          name="description"
-          content="Descubre Kenia y la reserva Masái Mara con Travel Design"
-        />
+        <meta name="description" content="Blog de Travel Design" />
       </Head>
 
       <main>
         <section className="hero-section position-relative">
-          <div
-            className="position-relative"
-            style={{ height: "100vh", width: "100%" }}
-          >
-            <img src="/assets/img/blog-header.jpg" alt="Kenia - Masái Mara" />
-            <div className="overlay d-flex align-items-center justify-content-center">
-              <h1 className="text-center text-white">Blog</h1>
-            </div>
+          <img src="/assets/img/blog-header.jpg" alt="imagen-blog" />
+          <div className="overlay d-flex align-items-center justify-content-center">
+            <h1 className="text-center text-white">Blog</h1>
           </div>
         </section>
 

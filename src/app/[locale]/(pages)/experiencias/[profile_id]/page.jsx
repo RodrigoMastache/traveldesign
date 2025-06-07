@@ -15,17 +15,72 @@ export default function Index() {
   const params = useParams();
   const profile_id = params.profile_id;
 
-  const [data, setData] = useState({});
+  function paginate(items, currentPage = 1, pageSize = 6) {
+    if (items?.length) {
+      const totalItems = items.length;
+      const totalPages = Math.ceil(totalItems / pageSize);
 
+      if (currentPage < 1 || currentPage > totalPages) {
+        return {
+          error: "Página fuera de rango",
+          currentPage,
+          totalPages,
+          data: [],
+        };
+      }
+
+      const startIndex = (currentPage - 1) * pageSize;
+      const endIndex = startIndex + pageSize;
+      const paginatedItems = items.slice(startIndex, endIndex);
+
+      return {
+        currentPage,
+        totalPages,
+        pageSize,
+        totalItems,
+        data: paginatedItems,
+      };
+    }
+
+    return {
+      currentPage,
+      totalPages: 0,
+      data: [],
+    };
+  }
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [data, setData] = useState({});
+  const [legacyData, setLegacyData] = useState({});
+
+  // Fetch initial data
   useEffect(() => {
     if (profile_id) {
       async function getData() {
         const datos = await getExperiencesByProfile(profile_id, locale);
-        setData(datos);
+        setLegacyData(datos);
+        setData({
+          ...datos,
+          experiences: paginate(datos?.experiences, 1),
+        });
       }
       getData();
     }
-  }, []);
+  }, [profile_id]);
+
+  // Re-paginate when page changes
+  useEffect(() => {
+    if (legacyData?.experiences) {
+      setData((prev) => ({
+        ...prev,
+        experiences: paginate(legacyData.experiences, currentPage),
+      }));
+    }
+  }, [currentPage]);
+
+  const navigatePage = (page) => {
+    setCurrentPage(page);
+  };
 
   return (
     <>
@@ -39,6 +94,7 @@ export default function Index() {
           }
         />
       </Head>
+
       <main>
         {/* Hero Section */}
         <section className="hero-section position-relative">
@@ -72,10 +128,11 @@ export default function Index() {
             </div>
           </div>
         </section>
+
         <section className="section-padding">
           <div className="container">
             <div className="row g-4">
-              {data?.experiences?.map((experience) => (
+              {data?.experiences?.data?.map((experience) => (
                 <div key={experience?.id} className="col-12 col-md-4">
                   <div className="card border-0 h-100">
                     <div className="position-relative">
@@ -115,6 +172,40 @@ export default function Index() {
             </div>
           </div>
         </section>
+
+        {/* Pagination */}
+        <div className="row">
+          <div className="col">
+            <nav
+              className="section-pagination d-flex justify-content-center mt-5"
+              aria-label="Navegación de páginas"
+            >
+              <ul className="pagination">
+                {data?.experiences?.totalPages &&
+                  Array.from(
+                    { length: data?.experiences?.totalPages },
+                    (_, item) => (
+                      <li
+                        key={item}
+                        className={`page-item ${
+                          data?.experiences?.currentPage === item + 1
+                            ? "active"
+                            : ""
+                        }`}
+                      >
+                        <button
+                          className="page-link rounded-circle"
+                          onClick={() => navigatePage(item + 1)}
+                        >
+                          {item + 1}
+                        </button>
+                      </li>
+                    )
+                  )}
+              </ul>
+            </nav>
+          </div>
+        </div>
       </main>
     </>
   );
