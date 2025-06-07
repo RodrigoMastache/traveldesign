@@ -14,7 +14,9 @@ export default function SwiperPagination({ data }) {
       <div className="container">
         <div className="row">
           <div className="col">
-            <h2 className="title-section mb-5">Top 10 Destinos</h2>
+            <h2 className="title-section mb-5">
+              {t("top-destinations-section.title")}
+            </h2>
             <div className={`swiper`}>
               <div className="swiper-cards-slider">
                 <Swiper

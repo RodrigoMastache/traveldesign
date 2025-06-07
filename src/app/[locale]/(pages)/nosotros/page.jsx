@@ -25,7 +25,7 @@ export default function NosotrosPage() {
     <>
       <main>
         <section className="hero-section">
-          <img src="/assets/img/nosotros-header.png" alt="kenia" />
+          <img src="/assets/img/nosotros-header.png" alt="imagen-nosotros" />
           <div className="overlay">
             <h1>{t("title")}</h1>
           </div>
