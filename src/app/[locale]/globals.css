@@ -1080,3 +1080,36 @@ select option {
     display: block;
   }
 }
+
+.search-result {
+  position: absolute;
+  background: #fff;
+  top: 39px;
+  right: 0px;
+  width: 400px;
+  height: auto;
+  max-height: 500px;
+  overflow: scroll;
+  & ul {
+    padding: 20px;
+    margin: 0;
+    & h5 {
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+    }
+    & li {
+      list-style: none;
+      cursor: pointer;
+      & a {
+        color: #212529;
+        text-decoration: none;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

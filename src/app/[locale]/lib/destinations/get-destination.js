@@ -91,3 +91,17 @@ export async function getTopDestinations(locale) {
 
   return destinations;
 }
+
+export async function getDestinations(locale) {
+  const currentLocale = locale === "es" ? "es-MX" : "en";
+  if (!currentLocale) {
+    return;
+  }
+
+  const firstPage = await query(
+    `destinations?locale=${currentLocale}&pagination[pageSize]=100`
+  );
+
+  if (!firstPage) return null;
+  return firstPage.data;
+}

@@ -8,6 +8,31 @@ const IMAGE_KEYS = [
   { key: "recimage", urlProp: "recImageUrl" },
 ];
 
+export async function getExperiences(locale) {
+  const currentLocale = locale === "es" ? "es-MX" : "en";
+  if (!currentLocale) {
+    return;
+  }
+
+  const pageSize = 100;
+
+  const firstPage = await query(
+    `experiences?locale=${currentLocale}&pagination[page]=1&pagination[pageSize]=${pageSize}`
+  );
+
+  const secondPage = await query(
+    `experiences?locale=${currentLocale}&pagination[page]=2&pagination[pageSize]=${pageSize}`
+  );
+
+  const allExperiences = [
+    ...(firstPage.data || []),
+    ...(secondPage.data || []),
+  ];
+
+  if (!allExperiences) return null;
+  return allExperiences;
+}
+
 export async function getExperience(documentId, locale) {
   const currentLocale = locale === "es" ? "es-MX" : "en";
   if (!currentLocale) {

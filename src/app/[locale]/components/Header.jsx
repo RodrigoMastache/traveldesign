@@ -8,13 +8,15 @@ import MegaMenu from "./MegaMenu";
 import MobileMenu from "./MobileMenu";
 import { getMenuDestinations } from "../lib/destinations/get-menu-destinations";
 import { getMenuExperiences } from "../lib/experiences/get-menu-experiences";
+import { getExperiences } from "../lib/experiences/get-experience";
+import { getDestinations } from "../lib/destinations/get-destination";
 import { useTranslations, useLocale } from "next-intl";
 import { useMediaQuery } from "react-responsive";
 
 export default function Header() {
   useEffect(() => {
     const currentPath = window.location.pathname;
-    const currentLang = currentPath.split("/")[1]; // 'en' o 'es'
+    const currentLang = currentPath.split("/")[1];
 
     const previousLang = localStorage.getItem("lang");
 
@@ -132,6 +134,67 @@ export default function Header() {
     };
   }, []);
 
+  const [data, setData] = useState([]);
+  const [dataDestinations, setDataDestinations] = useState([]);
+
+  const getData = async () => {
+    return getExperiences(locale)
+      .then((res) => {
+        setData(res);
+      })
+      .catch((error) => {
+        console.error("error", error);
+      });
+  };
+
+  const getDataDestinations = async () => {
+    return getDestinations(locale)
+      .then((res) => {
+        setDataDestinations(res);
+      })
+      .catch((error) => {
+        console.error("error", error);
+      });
+  };
+
+  const handleFocus = () => {
+    getData();
+    getDataDestinations();
+  };
+
+  function normalizarTexto(texto) {
+    return texto
+      ? texto
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+      : "";
+  }
+
+  function buscarMientrasEscribes(arr, texto) {
+    const textoNormalizado = normalizarTexto(texto);
+
+    return arr.filter((item) => {
+      const name = normalizarTexto(item.name || "");
+      const country = normalizarTexto(item.country || "");
+      return (
+        name.includes(textoNormalizado) || country.includes(textoNormalizado)
+      );
+    });
+  }
+
+  const [results, setResultsExperiencias] = useState([]);
+  const [resultsDestinos, setResultsDestinos] = useState([]);
+  const [keyFinder, setKeyFinder] = useState("");
+
+  const handleSearch = (value) => {
+    setKeyFinder(value);
+    const busqueda = buscarMientrasEscribes(data, value);
+    const busquedaDestinos = buscarMientrasEscribes(dataDestinations, value);
+    setResultsExperiencias(busqueda);
+    setResultsDestinos(busquedaDestinos);
+  };
+
   return (
     <header className="position-relative">
       <nav ref={navbarRef} className="navbar navbar-expand-lg position-fixed">
@@ -201,8 +264,44 @@ export default function Header() {
                   type="text"
                   placeholder=""
                   aria-label="Search"
+                  onFocus={() => handleFocus()}
+                  onChange={(e) => handleSearch(e.target.value)}
+                  value={keyFinder}
                 />
               </form>
+              {Boolean(keyFinder && results?.length) && (
+                <div className="search-result">
+                  <ul>
+                    <h5 style={{ marginBottom: "20px" }}>Experiencias</h5>
+                    {results?.map((item) => (
+                      <li
+                        key={item?.documentId}
+                        onClick={() => setKeyFinder("")}
+                      >
+                        <Link href={`/experiencia/${item.documentId}`}>
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <ul>
+                    <h5 style={{ marginBottom: "20px" }}>Destinos</h5>
+                    {resultsDestinos?.map((item) => (
+                      <li
+                        key={item?.documentId}
+                        onClick={() => setKeyFinder("")}
+                      >
+                        <Link
+                          href={`/destinos/${item.documentId}`}
+                          style={{ textTransform: "capitalize" }}
+                        >
+                          {item.country}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
           <div className="d-lg-none">
