@@ -377,7 +377,10 @@ export default function Header() {
                       {results?.map((item) => (
                         <li
                           key={item?.documentId}
-                          onClick={() => setKeyFinder("")}
+                          onClick={() => {
+                            setKeyFinder("");
+                            setIsSearchOpen(!isSearchOpen);
+                          }}
                         >
                           <Link href={`/experiencia/${item.documentId}`}>
                             {item.name}
@@ -399,7 +402,10 @@ export default function Header() {
                       {resultsDestinos?.map((item) => (
                         <li
                           key={item?.documentId}
-                          onClick={() => setKeyFinder("")}
+                          onClick={() => {
+                            setKeyFinder("");
+                            setIsSearchOpen(!isSearchOpen);
+                          }}
                         >
                           <Link
                             href={`/destinos/${item.documentId}`}
