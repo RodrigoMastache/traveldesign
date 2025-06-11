@@ -6,7 +6,6 @@ export async function getUnforgettableExperiences(locale) {
     return;
   }
 
-  console.log("currentLocale", currentLocale);
   const res = await query(
     `unforgettable-experiences?locale=${currentLocale}&populate=experiences&populate[0]=experiences&populate[1]=experiences.banner`
   );

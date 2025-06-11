@@ -2,6 +2,9 @@
   "home": {
     "main": {
       "hero": {
+        "title-img-1": "Experience the luxury",
+        "title-img-2": "Creating memories",
+        "title-img-3": "Awake your senses",
         "btn-text": "Plan your trip"
       },
       "introduction": {

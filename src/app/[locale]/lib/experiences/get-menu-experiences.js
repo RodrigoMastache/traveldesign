@@ -9,7 +9,6 @@ export function getMenuExperiences(profile, locale) {
     `experience-categories?filters[profile][$eq]=${profile}&locale=${currentLocale}&populate=experiences&populate[0]=banner`
   ).then((res) => {
     const experiences = res.data;
-    console.log("experiences", experiences);
     experiences?.map((experience) => {
       if (experience.banner) {
         experience.cover = `${process.env.NEXT_PUBLIC_STRAPI_HOST_IMAGE}${experience.banner.url}`;
