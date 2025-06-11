@@ -137,7 +137,7 @@ export default function Header() {
   const [data, setData] = useState([]);
   const [dataDestinations, setDataDestinations] = useState([]);
 
-  const getData = async () => {
+  const getDataExperiences = async () => {
     return getExperiences(locale)
       .then((res) => {
         setData(res);
@@ -158,7 +158,7 @@ export default function Header() {
   };
 
   const handleFocus = () => {
-    getData();
+    getDataExperiences();
     getDataDestinations();
   };
 
@@ -272,7 +272,14 @@ export default function Header() {
               {Boolean(keyFinder && results?.length) && (
                 <div className="search-result">
                   <ul>
-                    <h5 style={{ marginBottom: "20px" }}>Experiencias</h5>
+                    <h5
+                      style={{
+                        marginBottom: "20px",
+                        textTransform: "capitalize",
+                      }}
+                    >
+                      {t("experiences")}
+                    </h5>
                     {results?.map((item) => (
                       <li
                         key={item?.documentId}
@@ -285,7 +292,14 @@ export default function Header() {
                     ))}
                   </ul>
                   <ul>
-                    <h5 style={{ marginBottom: "20px" }}>Destinos</h5>
+                    <h5
+                      style={{
+                        marginBottom: "20px",
+                        textTransform: "capitalize",
+                      }}
+                    >
+                      {t("destinations")}
+                    </h5>
                     {resultsDestinos?.map((item) => (
                       <li
                         key={item?.documentId}
@@ -312,6 +326,95 @@ export default function Header() {
               <FiSearch size={24} />
             </button>
           </div>
+          {isSearchOpen && (
+            <div className="search-result-mobile" style={{ padding: "40px" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  marginBottom: "20px",
+                }}
+              >
+                <span
+                  role="button"
+                  style={{ fontSize: "25px" }}
+                  onClick={() => {
+                    setKeyFinder("");
+                    setIsSearchOpen(!isSearchOpen);
+                  }}
+                >
+                  ✕
+                </span>
+              </div>
+              <div>
+                <label htmlFor="finder-mobile" style={{ marginBottom: "10px" }}>
+                  {t("search")}
+                </label>
+                <input
+                  id="finder-mobile"
+                  className="search-input"
+                  type="text"
+                  placeholder=""
+                  aria-label="Search"
+                  onFocus={() => handleFocus()}
+                  onChange={(e) => handleSearch(e.target.value)}
+                  style={{ width: "100%" }}
+                  value={keyFinder}
+                />
+              </div>
+              {keyFinder && (
+                <div>
+                  {Boolean(results.length) && (
+                    <ul>
+                      <h5
+                        style={{
+                          marginBottom: "20px",
+                          textTransform: "capitalize",
+                        }}
+                      >
+                        {t("experiences")}
+                      </h5>
+                      {results?.map((item) => (
+                        <li
+                          key={item?.documentId}
+                          onClick={() => setKeyFinder("")}
+                        >
+                          <Link href={`/experiencia/${item.documentId}`}>
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  {Boolean(resultsDestinos.length) && (
+                    <ul>
+                      <h5
+                        style={{
+                          marginBottom: "20px",
+                          textTransform: "capitalize",
+                        }}
+                      >
+                        {t("destinations")}
+                      </h5>
+                      {resultsDestinos?.map((item) => (
+                        <li
+                          key={item?.documentId}
+                          onClick={() => setKeyFinder("")}
+                        >
+                          <Link
+                            href={`/destinos/${item.documentId}`}
+                            style={{ textTransform: "capitalize" }}
+                          >
+                            {item.country}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
         </div>
         {isMobileScreen && <MobileMenu />}
       </nav>

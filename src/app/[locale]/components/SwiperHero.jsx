@@ -7,27 +7,28 @@ import "swiper/css/pagination";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-const slides = [
-  {
-    image: "/assets/img/home-banner.webp",
-    title: "Experience the luxury",
-    alt: "Imagen 1",
-  },
-  {
-    image: "/assets/img/home-banner2.webp",
-    title: "Creating memories",
-    alt: "Imagen 2",
-  },
-  {
-    image: "/assets/video/VideoBanner.mp4",
-    title: "Awake your senses",
-    alt: "Video banner",
-    isVideo: true,
-  },
-];
-
 export default function SwiperHero() {
   const t = useTranslations("home");
+
+  const slides = [
+    {
+      image: "/assets/img/home-banner.webp",
+      title: t("main.hero.title-img-1"),
+      alt: "Imagen 1",
+    },
+    {
+      image: "/assets/img/home-banner2.webp",
+      title: t("main.hero.title-img-2"),
+      alt: "Imagen 2",
+    },
+    {
+      image: "/assets/video/VideoBanner.mp4",
+      title: t("main.hero.title-img-3"),
+      alt: "Video banner",
+      isVideo: true,
+    },
+  ];
+
   return (
     <div className="swiper swiper-hero position-relative">
       <div className="swiper-wrapper">

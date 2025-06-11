@@ -27,8 +27,6 @@ export default function Index() {
     getData();
   }, []);
 
-  console.log("blog", blog);
-
   return (
     <>
       <Head>

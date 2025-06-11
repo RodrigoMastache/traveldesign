@@ -53,7 +53,7 @@ export default function Footer() {
                 </section>
                 <section>
                   <p>
-                    <Link className="underline" href="#">
+                    <Link className="underline" href="/nosotros">
                       {t("frequent-questions.title")}
                     </Link>
                   </p>

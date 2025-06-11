@@ -5,12 +5,12 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { getMenuDestinations } from "../lib/destinations/get-menu-destinations";
 import { getMenuExperiences } from "../lib/experiences/get-menu-experiences";
-import { useLocale } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function MobileMenu() {
   useEffect(() => {
     const currentPath = window.location.pathname;
-    const currentLang = currentPath.split("/")[1]; // 'en' o 'es'
+    const currentLang = currentPath.split("/")[1];
 
     const previousLang = localStorage.getItem("lang");
 
@@ -23,7 +23,7 @@ export default function MobileMenu() {
   }, []);
 
   const router = useRouter();
-
+  const t = useTranslations("header");
   const locale = useLocale();
   const [openSubmenus, setOpenSubmenus] = useState({});
 
@@ -123,10 +123,11 @@ export default function MobileMenu() {
           <div className="nav-item">
             <button
               className="submenu-toggle"
+              style={{ textTransform: "capitalize" }}
               data-bs-toggle="collapse"
               onClick={() => toggleSubmenu("destinos")}
             >
-              Destinos
+              {t("destinations")}
             </button>
             <div
               className={`collapse ${openSubmenus["destinos"] ? "show" : ""}`}
@@ -185,10 +186,11 @@ export default function MobileMenu() {
           <div className="nav-item">
             <button
               className="submenu-toggle"
+              style={{ textTransform: "capitalize" }}
               data-bs-toggle="collapse"
               onClick={() => toggleSubmenu("experiencias")}
             >
-              Experiencias
+              {t("experiences")}
             </button>
             <div
               className={`collapse ${
@@ -224,10 +226,11 @@ export default function MobileMenu() {
               onClick={() => {
                 router.push(`/nosotros`);
               }}
+              style={{ textTransform: "capitalize" }}
               data-bs-dismiss="offcanvas"
               className="submenu-toggle"
             >
-              Nosotros
+              {t("about-us")}
             </button>
           </div>
 
@@ -237,9 +240,10 @@ export default function MobileMenu() {
                 router.push(`/contacto`);
               }}
               data-bs-dismiss="offcanvas"
+              style={{ textTransform: "capitalize" }}
               className="submenu-toggle"
             >
-              Contacto
+              {t("contact")}
             </button>
           </div>
 
