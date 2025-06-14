@@ -20,6 +20,9 @@ const poppins = Poppins({
 export const metadata = {
   title: "Travel Design",
   description: "Luxury travel experiences",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default async function RootLayout({ children, params }) {
@@ -31,6 +34,7 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={locale}>
       <head>
+        <link rel="icon" href="/favicon.ico" />
         <Script
           id="gtm-head"
           strategy="afterInteractive"
