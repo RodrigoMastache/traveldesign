@@ -68,7 +68,11 @@ export default function Footer() {
                     </Link>
                   </p>
                   <section className="rrss d-flex gap-3 mt-4 justify-content-center justify-content-md-start">
-                    <Link href="#" target="_blank">
+                    <a
+                      href="https://www.facebook.com/people/Travel-Design-MX/100032495513266/"
+                      target="_blank"
+                      aria-label="Facebook"
+                    >
                       <Image
                         src="/assets/img/icono-facebook.svg"
                         width={24}
@@ -76,8 +80,12 @@ export default function Footer() {
                         className="img-fluid"
                         alt="Facebook"
                       />
-                    </Link>
-                    <Link href="#" target="_blank">
+                    </a>
+                    <a
+                      href="https://www.instagram.com/traveldesignmx"
+                      target="_blank"
+                      aria-label="Instagram"
+                    >
                       <Image
                         src="/assets/img/icono-instagram.svg"
                         width={24}
@@ -85,7 +93,7 @@ export default function Footer() {
                         className="img-fluid"
                         alt="Instagram"
                       />
-                    </Link>
+                    </a>
                   </section>
                 </section>
               </section>

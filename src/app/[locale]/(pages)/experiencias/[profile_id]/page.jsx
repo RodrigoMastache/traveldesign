@@ -98,14 +98,9 @@ export default function Index() {
       <main>
         {/* Hero Section */}
         <section className="hero-section position-relative">
-          <div
-            className="position-relative"
-            style={{ height: "100vh", width: "100%" }}
-          >
-            <img src={data.banner} alt={data?.name || "imagen"} />
-            <div className="overlay d-flex align-items-center justify-content-center">
-              <h1 className="text-center text-white">{data?.name}</h1>
-            </div>
+          <img src={data.banner} alt={data?.name || "imagen"} />
+          <div className="overlay d-flex align-items-center justify-content-center">
+            <h1 className="text-center text-white">{data?.name}</h1>
           </div>
         </section>
 

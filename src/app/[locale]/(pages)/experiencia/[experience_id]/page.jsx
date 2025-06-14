@@ -56,19 +56,14 @@ export default function Index() {
       <main>
         {/* Hero Section */}
         <section className="hero-section position-relative">
-          <div
-            className="position-relative"
-            style={{ height: "100vh", width: "100%" }}
-          >
-            {data?.bannerUrl && (
-              <img src={data?.bannerUrl} alt="Kenia - Masái Mara" />
-            )}
-            <div className="overlay d-flex align-items-center justify-content-center">
-              <h1 className="text-center text-white">
-                <span>{data.country}</span>
-                {data.name}
-              </h1>
-            </div>
+          {data?.bannerUrl && (
+            <img src={data?.bannerUrl} alt="Kenia - Masái Mara" />
+          )}
+          <div className="overlay d-flex align-items-center justify-content-center">
+            <h1 className="text-center text-white">
+              <span>{data.country}</span>
+              {data.name}
+            </h1>
           </div>
         </section>
 
