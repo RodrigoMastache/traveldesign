@@ -5,15 +5,12 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import { getBlog, getBlogs } from "../../../lib/blogs/get-blogs";
-import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
 export default function Index() {
   const locale = useLocale();
 
-  const b = useTranslations("blog");
-  const c = useTranslations("ctas");
   const params = useParams();
   const blog_id = params.blog_id;
 
@@ -46,24 +43,11 @@ export default function Index() {
 
       <main>
         <section className="hero-section position-relative">
-          <div
-            className="position-relative"
-            style={{ height: "100vh", width: "100%" }}
-          >
-            <img src={blog?.cover} alt="Kenia - Masái Mara" />
-            <div className="overlay d-flex align-items-center justify-content-center">
-              <h1 className="text-center text-white">{blog?.title}</h1>
-            </div>
+          <img src={blog?.cover} alt="Kenia - Masái Mara" />
+          <div className="overlay d-flex align-items-center justify-content-center">
+            <h1 className="text-center text-white">{blog?.title}</h1>
           </div>
         </section>
-        {/* 
-        <section className="section-padding">
-          <div className="container">
-            {Object.keys(blog).length && (
-              <BlocksRenderer content={blog.content} />
-            )}
-          </div>
-        </section> */}
 
         <section className="section-padding">
           <div className="container">
@@ -82,7 +66,7 @@ export default function Index() {
                     <ul className="list-unstyled">
                       {blogs &&
                         blogs.map((item) => (
-                          <li>
+                          <li key={item?.documentId}>
                             <Link
                               className="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
                               href={`/blog/${item?.documentId}`}

@@ -38,7 +38,7 @@ export default function NosotrosPage() {
                 <img
                   src="/assets/img/Nosotros-1.png"
                   className="img-fluid h-100 object-fit-cover"
-                  alt="Masai Mara"
+                  alt="Nosotros"
                 />
               </div>
               <div className="col-md-8 order-0 order-md-1">
