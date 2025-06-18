@@ -62,11 +62,6 @@ export default function Footer() {
                       {t("private-notice.title")}
                     </Link>
                   </p>
-                  <p>
-                    <Link className="underline" href="#">
-                      {t("termns-conditions.title")}
-                    </Link>
-                  </p>
                   <section className="rrss d-flex gap-3 mt-4 justify-content-center justify-content-md-start">
                     <a
                       href="https://www.facebook.com/people/Travel-Design-MX/100032495513266/"
