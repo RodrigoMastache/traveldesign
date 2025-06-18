@@ -93,11 +93,7 @@ export default function Index() {
                                   "https://static.vecteezy.com/system/resources/thumbnails/004/141/669/small_2x/no-photo-or-blank-image-icon-loading-images-or-missing-image-mark-image-not-available-or-image-coming-soon-sign-simple-nature-silhouette-in-frame-isolated-illustration-vector.jpg"
                                 }
                                 alt={item?.title}
-                                style={{
-                                  objectFit: "cover",
-                                  width: "100%",
-                                  height: "96px",
-                                }}
+                                className="blog-post-img"
                               />
                               <div className="col-lg-8">
                                 <h6 className="mb-0">{item?.title}</h6>
