@@ -20,13 +20,13 @@ export async function getBlogs(locale) {
   return blogs;
 }
 
-export async function getBlog(documentId, locale) {
+export async function getBlog(slug, locale) {
   const currentLocale = locale === "es" ? "es-MX" : "en";
   if (!currentLocale) {
     return;
   }
   const res = await query(
-    `blogs?filters[documentId][$eq]=${documentId}&locale=${currentLocale}&populate=banner`
+    `blogs?filters[slug][$eq]=${slug}&locale=${currentLocale}&populate=banner`
   );
   const blog = res.data[0];
 
