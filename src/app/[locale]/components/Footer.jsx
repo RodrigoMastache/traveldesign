@@ -36,7 +36,7 @@ export default function Footer() {
                       <br />
                       Bosque de las Lomas,
                       <br />
-                      C.P 051200
+                      C.P 05120
                     </Link>
                   </p>
                 </section>
