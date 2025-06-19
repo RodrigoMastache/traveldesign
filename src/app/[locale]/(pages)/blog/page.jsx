@@ -80,7 +80,7 @@ export default function Index() {
                         </h3>
                         <p>{blog?.introduction}</p>
                         <Link
-                          href={`/blog/${blog?.documentId}`}
+                          href={`/blog/${blog?.slug}`}
                           className="text-dark text-decoration-underline"
                         >
                           {b("blog-cta")}
