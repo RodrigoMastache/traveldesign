@@ -191,6 +191,7 @@
   },
   "blog": {
     "intro": "Welcome to the Travel Design Blog Here, we share information, inspiration, and expert advice for discerning travelers seeking unique and unforgettable experiences. From exclusive destinations to tips for seamless travel planning, our blog is your trusted partner in designing exceptional adventures tailored to your dreams.",
-    "blog-cta": "Read post"
+    "blog-cta": "Read post",
+    "recent-posts": "Recent posts"
   }
 }

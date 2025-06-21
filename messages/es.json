@@ -191,6 +191,7 @@
   },
   "blog": {
     "intro": "Bienvenido al Blog de Travel Design Aquí compartimos información, inspiración, consejos expertos para viajeros exigentes que buscan experiencias únicas y memorables. Desde destinos exclusivos hasta tips para planificar viajes de sin contratiempos, nuestro blog es tu aliado para diseñar aventuras excepcionales a la medida de tus sueños.",
-    "blog-cta": "Leer post"
+    "blog-cta": "Leer post",
+    "recent-posts": "Últimas entradas"
   }
 }
