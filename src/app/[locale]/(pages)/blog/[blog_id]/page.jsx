@@ -7,9 +7,11 @@ import Head from "next/head";
 import { getBlog, getBlogs } from "../../../lib/blogs/get-blogs";
 import { useLocale } from "next-intl";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import { useTranslations } from "next-intl";
 
 export default function Index() {
   const locale = useLocale();
+  const b = useTranslations("blog");
 
   const params = useParams();
   const blog_id = params.blog_id;
@@ -62,14 +64,14 @@ export default function Index() {
               <div className="col-md-4">
                 <div className="position-sticky" style={{ top: "7rem" }}>
                   <div>
-                    <h4 className="fst-italic">Últimas entradas</h4>
+                    <h4 className="fst-italic">{b("recent-posts")}</h4>
                     <ul className="list-unstyled">
                       {blogs &&
                         blogs.map((item) => (
                           <li key={item?.documentId}>
                             <Link
                               className="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
-                              href={`/blog/${item?.documentId}`}
+                              href={`/blog/${item?.slug}`}
                             >
                               <img
                                 src={
