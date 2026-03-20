@@ -30,13 +30,13 @@ export default function Footer() {
                       href="https://maps.app.goo.gl/bpRoKHiGTVWi51Fg8"
                       target="_blank"
                     >
-                      Bosque de Radiatas 34,
+                      Prol. Paseo de la Reforma 799
                       <br />
-                      Piso 1, Oficina 1-D.
+                      Santa Fé, Zedec Sta Fé, Álvaro Obregón
                       <br />
-                      Bosque de las Lomas,
+                      01219 CDMX
                       <br />
-                      C.P 05120
+                      Yama Bosques Oficina 411
                     </Link>
                   </p>
                 </section>
@@ -48,7 +48,7 @@ export default function Footer() {
                     </Link>
                   </p>
                   <p>
-                    <Link href="tel:+525585263303">+52 55 8526 3303</Link>
+                    <Link href="tel:+525598982433">+52 55 9898 2433</Link>
                   </p>
                 </section>
                 <section>

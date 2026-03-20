@@ -111,14 +111,20 @@ export default function NosotrosPage() {
               <div className="col-lg-6 border-end  d-flex flex-column justify-content-center align-items-center">
                 <p className="title-article">Suc. CDMX</p>
                 <p className="lead">
-                  Radiatas 34, Bosque de las Lomas
+                  Prol. Paseo de la Reforma 799, 
                   <br />
-                  55-8526-3303
+                  Santa Fé, Zedec Sta Fé, Álvaro Obregón, 
+                  <br />
+                  01219 CDMX
+                  <br />
+                  Yama Bosques Oficina 411
+                  <br />
+                  55-9898-2433
                   <br />
                   Lun - Vie: 9am - 6pm
                 </p>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.5568218348044!2d-99.25549662429471!3d19.388333042092075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201190fff6293%3A0x5f50f151cc47c120!2sBosque%20de%20Radiatas%2034%2C%20Bosques%20de%20las%20Lomas%2C%20Cuajimalpa%20de%20Morelos%2C%2005120%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1747773464245!5m2!1ses-419!2smx"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4278.439807068307!2d-99.2604394!3d19.3756108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d200deea5ec237%3A0x1e1eef859fe29449!2sProl.%20P.%C2%BA%20de%20la%20Reforma%20799%2C%20Santa%20Fe%2C%20Zedec%20Sta%20F%C3%A9%2C%20%C3%81lvaro%20Obreg%C3%B3n%2C%2001219%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e1!3m2!1ses!2smx!4v1774022660556!5m2!1ses!2smx"
                   width="400"
                   height="300"
                   style={{ border: 0 }}
